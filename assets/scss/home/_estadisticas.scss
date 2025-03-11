@@ -1,0 +1,6363 @@
+// .scoreboard-wrap {
+//   background-color: #fff;
+
+//   .score-body {
+//     height: 150px;
+//     overflow: hidden;
+//     position: relative;
+
+//     #scoreboard {
+//       z-index: -3;
+//       overflow: hidden;
+//       min-height: 125px;
+//       color: #333333;
+//       background-color: #fff;
+
+//       .item-game {
+//         float: left;
+//         height: auto;
+//         padding: 0;
+//         margin: 0 0 0;
+//         text-align: center;
+//         position: relative;
+
+//         @media (min-width: 320px) and (min-device-width: 320px),
+//           (max-device-width: 320px) and (min-width: 320px) and (orientation: landscape) {
+//           width: 50%;
+//         }
+
+//         .title {
+//           font-family: Helvetica, Arial, sans-serif;
+//           font-weight: bold;
+
+//           .liga {
+//             color: #000;
+//             background: #ffffff;
+//             text-transform: capitalize;
+//             text-align: center;
+//             height: 30px;
+//             line-height: 30px;
+//             width: 100%;
+//             float: left;
+//             font-size: 12px;
+//             border-right: 2px solid #cccccc;
+//           }
+//         }
+
+//         .estatus-game {
+//           display: inline-block;
+//           font-weight: bold;
+//           color: #333333;
+
+//           .estatus {
+//             display: inline-block;
+//             line-height: 25px;
+//             height: 25px;
+//             text-transform: uppercase;
+//             font-size: 12px;
+//             padding: 0 0px 0px 5px;
+//           }
+
+//           .en-vivo::before {
+//             content: "";
+//             display: block;
+//             border-radius: 10px;
+//             width: 10px;
+//             height: 10px;
+//             background: #ff191e;
+//             position: absolute;
+//             top: 0px;
+//             left: -16px;
+//           }
+
+//           .time {
+//             color: #ff191e;
+//             font-size: 12px;
+//             display: inline-block;
+//             position: relative;
+//           }
+//         }
+
+//         &:before {
+//           content: "";
+//           position: absolute;
+//           height: 130px;
+//           border-left: 2px #cccccc solid;
+//           top: 30px;
+//           right: 0;
+//         }
+
+//         .marcador {
+//           display: flex;
+//           justify-content: space-between;
+//           height: 66px;
+//           margin: 0 10px;
+
+//           .local {
+//             display: flex;
+//             width: calc(50% - 5px);
+//             color: #333333;
+//             font-weight: bold;
+
+//             .local-team {
+//               display: inline-block;
+
+//               .local-team-name {
+//                 font-size: 10px;
+//               }
+
+//               .local-team-momio {
+//                 font-size: 12px;
+//                 color: #ff0000;
+//               }
+//             }
+
+//             .local-marcador {
+//               text-align: center;
+//               font-weight: bold;
+//               width: calc(100% - 30px);
+//               font-size: 19px;
+//             }
+
+//           }
+
+//           .inter {
+//             color: #333333;
+//             margin: 5px 0 0;
+//             vertical-align: top;
+//             font-weight: bold;
+//           }
+
+//           .visit {
+//             display: flex;
+//             width: calc(50% - 5px);
+//             color: #333333;
+//             font-weight: bold;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .score-footer {
+//     #scoremore1 {
+//       height: 30px;
+//       display: block;
+//       background: #bd2027;
+//       color: #fff;
+//       width: 100%;
+//       font-size: 16px;
+//       text-shadow: none;
+//       position: relative;
+//       border-style: solid;
+//       border-color: #bd2027;
+//       font-family: helvetica;
+//       cursor: pointer;
+//     }
+
+//     .icon-flecha-d {
+//       &:before {
+//         content: "\e951";
+//         color: #fff;
+//         transform: rotate(-90deg);
+//         position: absolute;
+//       }
+//     }
+
+//     .fa-solid {
+//       &:first-child {
+//         font-size: 16px;
+//         margin-right: 13%;
+//         line-height: 25px;
+//       }
+
+//       &:last-child {
+//         font-style: normal;
+//         margin-left: 10%;
+//         line-height: 25px;
+//       }
+//     }
+//   }
+// }
+
+@media (min-width: 320px) and (min-device-width: 320px),
+  (max-device-width: 320px) and (min-width: 320px) and (orientation: landscape) {
+  .scoreboard-wrap {
+    .score-header {
+      // justify-content: space-between;
+      // display: flex;
+      // padding: 0;
+      // background: #cccccc;
+      // flex-direction: row-reverse;
+      // flex-wrap: wrap-reverse;
+
+      // #score_select {
+      //   font-family: Helvetica;
+      //   text-indent: 0.01px;
+      //   text-overflow: "";
+      //   padding: 0 10px;
+      //   font-weight: bold;
+      //   text-transform: uppercase;
+      //   height: 30px;
+      //   box-shadow: none;
+      //   appearance: none;
+      //   overflow: hidden;
+      //   outline: 0px;
+      //   height: 29px;
+      //   background: url("/assets/img/back-select-scoreboard.png") no-repeat
+      //     right center;
+      //   z-index: 5;
+      //   border: 2px solid #666666;
+      //   width: 100%;
+      //   margin-top: 10px;
+      //   border-radius: 20px;
+      // }
+
+      .boton-estadisticas {
+        // float: right;
+        // width: 100%;
+        // margin: 3px 10px -3px 10px;
+        // position: relative;
+        .tit_estadisticas {
+          background: black;
+          color: white;
+          padding: 5px 10px 5px 10px;
+          font-size: 12px;
+          font-family: helvetica;
+          text-transform: uppercase;
+          font-weight: bold;
+          // line-height: 0px;
+          position: absolute;
+          right: 0px;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 320px) and (min-device-width: 320px), (max-device-width: 320px) and (min-width: 320px) and (orientation: landscape) {
+  #block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game {
+      width: 50%;
+  }
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-header {
+  justify-content: space-between;
+  display: flex;
+  padding: 0;
+  background: #CCCCCC;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-header #score_select {
+  font-family: Helvetica;
+  text-indent: 0.01px;
+  text-overflow: '';
+  padding: 0 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 30px;
+  box-shadow: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  overflow: hidden;
+  outline: 0px;
+  height: 29px;
+  background: url(/modules/custom/scoreboard/images/back-select-scoreboard.png) no-repeat right center;
+  z-index: 5;
+  border: 2px solid #666666;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-header .boton-estadisticas {
+  float: right;
+  width: 100%;
+  margin: 3px 10px -3px 10px;
+  position: relative;
+}
+}
+@media (min-width: 768px) and (min-device-width: 768px), (max-device-width: 768px) and (min-width: 768px) and (orientation: landscape) {
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game {
+       width: 33.33333%;
+  }
+}
+@media (min-width: 1024px) {
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game {
+       width: 16.66%;
+  }
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-header #score_select {
+      width: 280px;
+      display: inline-block;
+      margin: 4px 0 3px 0;
+      position: relative;
+      vertical-align: top;
+      height: 30px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-header .boton-estadisticas {
+  width: 258px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-header {
+  flex-direction: inherit;
+      flex-wrap: wrap-reverse;
+      padding: 0 10px;
+}
+}
+
+#block-gavias-sancy-scoreboardblock {
+  margin-bottom: 0;
+}
+
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap {
+  background-color: #fff;
+}
+
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-header .boton-estadisticas .caliente-a .caliente-marcador {
+padding-bottom: 0px;
+height: 25px;
+/*padding-left: 13px;
+padding-right: 20px;*/
+}
+
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-header .boton-estadisticas .tit_estadisticas .icon-estadisticas {
+font-size: 20px;
+line-height: 25px;
+top: 0px;
+position: relative;
+padding-left: 10px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-header .boton-estadisticas .tit_estadisticas .icon-noticias {
+font-size: 20px;
+padding: 0px 0px 0 35px;
+top: 3px;
+position: relative;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .up {
+height: 100% !important;
+overflow: visible !important;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body {
+height: 150px;
+overflow: hidden;
+position: relative;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard {
+z-index: -3;
+overflow: hidden;
+min-height: 125px;
+/*background: #282828;*/
+color: #333333;
+background-color: #fff;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .loader-container {
+/*background: #282828;*/
+width: 100%;
+position: relative;
+height: auto;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .loader-container #preload {
+display: flex;
+margin-left: calc(50% - 40px);
+margin-top: 40px;
+position: relative;
+height: 120px;
+overflow: hidden;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .loader-container #preload img {
+width: 40px;
+height: 40px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game.nfl .estatus-game .estatus {
+text-transform: none;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game {
+float: left;
+height: auto;
+padding: 0;
+margin: 0 0 0;
+text-align: center;
+position: relative;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game:before {
+content: '';
+position: absolute;
+height: 130px;
+border-left: 2px #CCCCCC solid;
+top: 30px;
+right: 0;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game:last-child:before {
+border-left: 0px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game:last-child .title {
+border-right: 0px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game:last-child .title .liga {
+width: calc(100% - 2px);
+border-right: 0;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .title {
+/*border-right: 2px solid #CCCCCC;*/
+font-family: Helvetica, Arial, sans-serif;
+font-weight: bold;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .title .liga {
+color: #000;
+background: #ffffff;
+font-size: 15px;
+text-transform: capitalize;
+text-align: center;
+height: 30px;
+line-height: 30px;
+width: 100%;
+float: left;
+font-size: 12px;
+border-right: 2px solid #CCCCCC;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .estatus-game {
+display: inline-block;
+font-weight: bold;
+color: #333333;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .estatus-game .FINALIZADO {
+color: #ff0400;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .estatus-game .estatus {
+display: inline-block;
+line-height: 25px;
+height: 25px;
+text-transform: uppercase;
+font-size: 12px;
+padding: 0 0px 0px 5px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .estatus-game .time {
+color: #FF191E;
+font-size: 12px;
+display: inline-block;
+position: relative;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .estatus-game .en-vivo::before {
+content: "";
+display: block;
+border-radius: 10px;
+width: 10px;
+height: 10px;
+background: #FF191E;
+position: absolute;
+top: 0px;
+left: -16px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador {
+display: flex;
+justify-content: space-between;
+height: 66px;
+margin: 0 10px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .local {
+display: flex;
+width: calc(50% - 5px);
+color: #333333;
+font-weight: bold;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .local .local-team {
+display: inline-block;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .local .local-team .local-team-logo {
+display: block;
+width: 30px;
+height: 30px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .local .local-team .local-team-logo .img_local {
+width: 30px;
+height: 30px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .local .local-team .local-team-name {
+font-size: 10px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .local .local-team .local-team-momio {
+font-size: 12px;
+color: #ff0000;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .local .local-marcador {
+text-align: center;
+font-weight: bold;
+width: calc(100% - 30px);
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .local .local-marcador .local-team-marcador {
+font-size: 19px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .inter {
+color: #333333;
+margin: 5px 0 0;
+vertical-align: top;
+font-weight: bold;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .inter .inter-val {
+font-size: 15px;
+font-weight: bold;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .inter .empate-team-momio {
+font-size: 12px;
+margin: 20px 0 0 0;
+color: #ff0000;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .visit {
+display: flex;
+width: calc(50% - 5px);
+color: #333333;
+font-weight: bold;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .visit .visit-team {
+display: inline-block;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .visit .visit-team .visit-team-logo {
+display: block;
+width: 30px;
+height: 30px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .visit .visit-team .visit-team-logo .img_local {
+width: 30px;
+height: 30px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .visit .visit-team .visit-team-name {
+font-size: 10px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .visit .visit-team .visit-team-momio {
+font-size: 12px;
+color: #ff0000;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .visit .visit-marcador {
+text-align: center;
+font-weight: bold;
+width: calc(100% - 30px);
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .marcador .visit .visit-marcador .local-team-visit {
+font-size: 19px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .item-footer:before {
+content: "";
+border-top: 2px solid #CCCCCC;
+height: 2px;
+width: calc(100% - 40px);
+left: 20px;
+position: absolute;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .item-footer .options-only-bet {
+text-align: center;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .item-footer .options-only-bet .service-provider-call {
+font-size: 15px;
+color: #333333;
+font-weight: bold;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body #scoreboard .item-game .item-footer .options-only-bet .service-provider-call .icon-caliente-scoreboard {
+font-size: 14px;
+background: red;
+border-radius: 2px;
+padding: 2px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-body.beisbol {
+height: 160px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-footer #scoremore1 {
+height: 30px;
+display: block;
+background: #BD2027;
+color: #fff;
+width: 100%;
+font-size: 16px;
+text-shadow: none;
+position: relative;
+border-style: solid;
+border-color: #BD2027;
+font-family: helvetica;
+cursor: pointer;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-footer .icon-flecha-d:first-child {
+font-style: normal;
+font-size: 16px;
+font-family: helvetica;
+margin-right: 13%;
+line-height: 25px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-footer .icon-flecha-d:last-child {
+font-style: normal;
+margin-left: 10%;
+line-height: 25px;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-footer .icon-flecha-d:before {
+content: "\e951";
+color: #fff;
+transform: rotate(-90deg);
+position: absolute;
+}
+#block-gavias-sancy-scoreboardblock .scoreboard-wrap .score-footer .icon-flecha-d.upf:before {
+transform: rotate(90deg);
+}
+
+
+.alemania .dus,
+.alemania .nur,
+.alemania .lev,
+.alemania .mon,
+.alemania .dor,
+.alemania .fra,
+.alemania .bay,
+.alemania .kln,
+.alemania .sch,
+.alemania .aug,
+.alemania .mai,
+.alemania .ham,
+.alemania .han,
+.alemania .htb,
+.alemania .lei,
+.alemania .fri,
+.alemania .bre,
+.alemania .hof,
+.alemania .stt,
+.alemania .wol,
+.alemania .ber,
+.alemania .pad,
+.alemania .arm,
+.alemania .vfl,
+.alemania .sgf,
+.alemania .dar,
+.alemania .hei,
+.alemania .svd {
+background: url("/modules/custom/scoreboard/images/bundesliga.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.alemania .dus {
+background-position: -33px -38px
+}
+
+.alemania .nur {
+background-position: 0px -38px
+}
+
+.alemania .lev {
+background-position: 0 0
+}
+
+.alemania .mon {
+background-position: -30px 0
+}
+
+.alemania .dor {
+background-position: -60px 0
+}
+
+.alemania .fra {
+background-position: -90px 0
+}
+
+.alemania .bay {
+background-position: -120px 0
+}
+
+.alemania .kln {
+background-position: -150px 0
+}
+
+.alemania .sch {
+background-position: -180px 0
+}
+
+.alemania .aug {
+background-position: -210px 0
+}
+
+.alemania .mai {
+background-position: -240px 0
+}
+
+.alemania .ham {
+background-position: -270px 0
+}
+
+.alemania .han {
+background-position: -300px 0
+}
+
+.alemania .htb {
+background-position: -330px 0
+}
+
+.alemania .lei {
+background-position: -360px 0
+}
+
+.alemania .fri {
+background-position: -390px 0
+}
+
+.alemania .bre {
+background-position: -420px 0
+}
+
+.alemania .hof {
+background-position: -450px 0
+}
+
+.alemania .stt {
+background-position: -480px 0
+}
+
+.alemania .wol {
+background-position: -510px 0
+}
+
+.alemania .ber {
+background-position: -70px -38px
+}
+
+.alemania .pad {
+background-position: -106px -40px
+}
+
+.alemania .arm {
+background-position: -177px -39px
+}
+
+.alemania .vfl {
+background-position: -209px -37px
+}
+
+.alemania .sgf {
+background-position: -240px -37px
+}
+
+.alemania .dar {
+background-position: -280px -37px
+}
+
+.alemania .hei {
+background-position: -304px -36px
+}
+
+.alemania .svd {
+background-position: -273px -36px
+}
+
+.champions .mcy,
+.champions .nap,
+.champions .fey,
+.champions .shk,
+.champions .spa,
+.champions .sev,
+.champions .mar,
+.champions .bes,
+.champions .lei,
+.champions .por,
+.champions .nic,
+.champions .bor,
+.champions .rma,
+.champions .tot,
+.champions .qar,
+.champions .atm,
+.champions .ben,
+.champions .man,
+.champions .juv,
+.champions .spo,
+.champions .bar,
+.champions .oly,
+.champions .csk,
+.champions .bas,
+.champions .che,
+.champions .rom,
+.champions .bmn,
+.champions .cel,
+.champions .art,
+.champions .psg,
+.champions .liv,
+.champions .mon,
+.champions .aek,
+.champions .ajx,
+.champions .crv,
+.champions .gal,
+.champions .int,
+.champions .hof,
+.champions .lok,
+.champions .lyo,
+.champions .psv,
+.champions .s04,
+.champions .vcf,
+.champions .you,
+.champions .vik,
+.champions .bru,
+.champions .krc,
+.champions .lil,
+.champions .rbs,
+.champions .pra,
+.champions .ata,
+.champions .blk,
+.champions .din,
+.champions .zen,
+.champions .dyn,
+.champions .ren,
+.champions .kra,
+.champions .laz,
+.champions .fer,
+.champions .ist,
+.champions .bmo,
+.champions .mid,
+.champions .vil,
+.champions .vwo,
+.champions .mlm,
+.champions .she,
+.champions .mil,
+.champions .ein,
+.champions .mac,
+.champions .ran,
+.champions .new,
+.champions .ant,
+.champions .esr,
+.champions .cop,
+.champions .ber,
+.champions .len,
+.champions .ars,
+.champions .scb,
+.champions .rso,
+.champions .asv,
+.champions .sbr,
+.champions .stu,
+.champions .slb,
+.champions .gir,
+.champions .stg,
+.champions .bol,
+.champions .sph {
+background: url("/modules/custom/scoreboard/images/champions.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.champions .mcy {
+background-position: -525px -5px
+}
+
+.champions .nap {
+background-position: -565px -5px
+}
+
+.champions .fey {
+background-position: -405px -5px
+}
+
+.champions .shk {
+background-position: -925px -5px
+}
+
+.champions .spa {
+background-position: -965px -5px
+}
+
+.champions .sev {
+background-position: -885px -5px
+}
+
+.champions .mar {
+background-position: -1245px -5px
+}
+
+.champions .bes {
+background-position: -205px -5px
+}
+
+.champions .lei {
+background-position: -805px -5px
+}
+
+.champions .por {
+background-position: -725px -5px
+}
+
+.champions .nic {
+background-position: -45px -5px
+}
+
+.champions .bor {
+background-position: -245px -5px
+}
+
+.champions .rma {
+background-position: -1285px -5px
+}
+
+.champions .tot {
+background-position: -1085px -5px
+}
+
+.champions .qar {
+background-position: -365px -5px
+}
+
+.champions .atm {
+background-position: -1165px -5px
+}
+
+.champions .ben {
+background-position: -1005px -5px
+}
+
+.champions .man {
+background-position: -1205px -5px
+}
+
+.champions .juv {
+background-position: -445px -5px
+}
+
+.champions .spo {
+background-position: -1045px -5px
+}
+
+.champions .bar {
+background-position: -1125px -5px
+}
+
+.champions .oly {
+background-position: -605px -5px
+}
+
+.champions .csk {
+background-position: -645px -5px
+}
+
+.champions .bas {
+background-position: -125px -5px
+}
+
+.champions .che {
+background-position: -325px -5px
+}
+
+.champions .rom {
+background-position: -845px -5px
+}
+
+.champions .bmn {
+background-position: -165px -5px
+}
+
+.champions .cel {
+background-position: -285px -5px
+}
+
+.champions .art {
+background-position: -5px -5px
+}
+
+.champions .psg {
+background-position: -685px -5px
+}
+
+.champions .liv {
+background-position: -485px -5px
+}
+
+.champions .mon {
+background-position: -85px -5px
+}
+
+.champions .aek {
+background-position: -4px -41px
+}
+
+.champions .ajx {
+background-position: -45px -39px
+}
+
+.champions .crv {
+background-position: -83px -39px
+}
+
+.champions .gal {
+background-position: -126px -39px
+}
+
+.champions .int {
+background-position: -205px -39px
+}
+
+.champions .hof {
+background-position: -164px -39px
+}
+
+.champions .lok {
+background-position: -245px -39px
+}
+
+.champions .lyo {
+background-position: -284px -39px
+}
+
+.champions .psv {
+background-position: -325px -39px
+}
+
+.champions .s04 {
+background-position: -363px -39px
+}
+
+.champions .vcf {
+background-position: -403px -41px
+}
+
+.champions .you {
+background-position: -444px -41px
+}
+
+.champions .vik {
+background-position: -484px -40px
+}
+
+.champions .bru {
+background-position: -525px -40px
+}
+
+.champions .krc {
+background-position: -560px -43px
+}
+
+.champions .lil {
+background-position: -594px -43px
+}
+
+.champions .rbs {
+background-position: -629px -43px
+}
+
+.champions .pra {
+background-position: -661px -43px
+}
+
+.champions .ata {
+background-position: -700px -41px
+}
+
+.champions .blk {
+background-position: -731px -41px
+}
+
+.champions .din {
+background-position: -768px -41px
+}
+
+.champions .zen {
+background-position: -806px -41px
+}
+
+.champions .dyn {
+background-position: -845px -41px
+}
+
+.champions .ren {
+background-position: -886px -41px
+}
+
+.champions .kra {
+background-position: -923px -41px
+}
+
+.champions .laz {
+background-position: -964px -41px
+}
+
+.champions .fer {
+background-position: -1006px -41px
+}
+
+.champions .ist {
+background-position: -1045px -41px
+}
+
+.champions .bmo {
+background-position: -1083px -41px
+}
+
+.champions .mid {
+background-position: -1124px -38px
+}
+
+.champions .vil {
+background-position: -8px -78px
+}
+
+.champions .vwo {
+background-position: -45px -77px
+}
+
+.champions .mlm {
+background-position: -83px -77px
+}
+
+.champions .she {
+background-position: -125px -77px
+}
+
+.champions .mil {
+background-position: -164px -77px
+}
+
+.champions .ein {
+background-position: -205px -77px
+}
+
+.champions .mac {
+background-position: -245px -77px
+}
+
+.champions .ran {
+background-position: -285px -77px
+}
+
+.champions .new {
+background-position: -1205px -41px
+}
+
+.champions .ant {
+background-position: -1165px -41px
+}
+
+.champions .esr {
+background-position: -85px -41px
+}
+
+.champions .cop {
+background-position: -328px -75px
+}
+
+.champions .ber {
+background-position: -366px -75px
+}
+
+.champions .len {
+background-position: -405px -75px
+}
+
+.champions .ars {
+background-position: -448px -75px
+}
+
+.champions .scb {
+background-position: -487px -75px
+}
+
+.champions .rso {
+background-position: -529px -75px
+}
+
+.champions .asv {
+background-position: -562px -75px
+}
+
+.champions .sbr {
+background-position: -751px -75px
+}
+
+.champions .stu {
+background-position: -816px -75px
+}
+
+.champions .slb {
+background-position: -686px -75px
+}
+
+.champions .gir {
+background-position: -630px -75px
+}
+
+.champions .stg {
+background-position: -783px -75px
+}
+
+.champions .bol {
+background-position: -596px -75px
+}
+
+.champions .sph {
+background-position: -718px -75px
+}
+
+.ligacampeonesconcacaf .cib,
+.ligacampeonesconcacaf .ste,
+.ligacampeonesconcacaf .sfc,
+.ligacampeonesconcacaf .oli,
+.ligacampeonesconcacaf .nyr,
+.ligacampeonesconcacaf .mot,
+.ligacampeonesconcacaf .tij,
+.ligacampeonesconcacaf .her,
+.ligacampeonesconcacaf .tig,
+.ligacampeonesconcacaf .col,
+.ligacampeonesconcacaf .tor,
+.ligacampeonesconcacaf .tau,
+.ligacampeonesconcacaf .dal,
+.ligacampeonesconcacaf .tau,
+.ligacampeonesconcacaf .sap,
+.ligacampeonesconcacaf .ame,
+.ligacampeonesconcacaf .gdl,
+.ligacampeonesconcacaf .mar,
+.ligacampeonesconcacaf .san,
+.ligacampeonesconcacaf .apa,
+.ligacampeonesconcacaf .gua,
+.ligacampeonesconcacaf .dyn,
+.ligacampeonesconcacaf .spo,
+.ligacampeonesconcacaf .ilc,
+.ligacampeonesconcacaf .auf,
+.ligacampeonesconcacaf .mty,
+.ligacampeonesconcacaf .tol,
+.ligacampeonesconcacaf .ali,
+.ligacampeonesconcacaf .com,
+.ligacampeonesconcacaf .pte,
+.ligacampeonesconcacaf .caz,
+.ligacampeonesconcacaf .leo,
+.ligacampeonesconcacaf .nyc,
+.ligacampeonesconcacaf .laf,
+.ligacampeonesconcacaf .car,
+.ligacampeonesconcacaf .mon,
+.ligacampeonesconcacaf .por,
+.ligacampeonesconcacaf .ala,
+.ligacampeonesconcacaf .arc,
+.ligacampeonesconcacaf .phi,
+.ligacampeonesconcacaf .rea,
+.ligacampeonesconcacaf .sdg,
+.ligacampeonesconcacaf .gty,
+.ligacampeonesconcacaf .frg,
+.ligacampeonesconcacaf .pum,
+.ligacampeonesconcacaf .cav,
+.ligacampeonesconcacaf .ner,
+.ligacampeonesconcacaf .atl,
+.ligacampeonesconcacaf .aus,
+.ligacampeonesconcacaf .orl,
+.ligacampeonesconcacaf .pac,
+.ligacampeonesconcacaf .res,
+.ligacampeonesconcacaf .van,
+.ligacampeonesconcacaf .vac,
+.ligacampeonesconcacaf .clb {
+background: url("/modules/custom/scoreboard/images/concacafleague.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.ligacampeonesconcacaf .ali {
+background-position: -207px -43px
+}
+
+.ligacampeonesconcacaf .tol {
+background-position: -433px -43px
+}
+
+.ligacampeonesconcacaf .mty {
+background-position: -403px -43px
+}
+
+.ligacampeonesconcacaf .auf {
+background-position: -248px -43px
+}
+
+.ligacampeonesconcacaf .ilc {
+background-position: -44px -44px
+}
+
+.ligacampeonesconcacaf .spo {
+background-position: -126px -44px
+}
+
+.ligacampeonesconcacaf .dyn {
+background-position: -5px -44px
+}
+
+.ligacampeonesconcacaf .gua {
+background-position: -327px -44px
+}
+
+.ligacampeonesconcacaf .apa {
+background-position: -289px -44px
+}
+
+.ligacampeonesconcacaf .san {
+background-position: -366px -44px
+}
+
+.ligacampeonesconcacaf .mar {
+background-position: -85px -44px
+}
+
+.ligacampeonesconcacaf .oli {
+background-position: -5px -5px
+}
+
+.ligacampeonesconcacaf .cib {
+background-position: -45px -5px
+}
+
+.ligacampeonesconcacaf .col {
+background-position: -366px -84px
+}
+
+.ligacampeonesconcacaf .dal {
+background-position: -125px -5px
+}
+
+.ligacampeonesconcacaf .her {
+background-position: -165px -5px
+}
+
+.ligacampeonesconcacaf .mot {
+background-position: -205px -5px
+}
+
+.ligacampeonesconcacaf .nyr {
+background-position: -245px -5px
+}
+
+.ligacampeonesconcacaf .ste {
+background-position: -285px -5px
+}
+
+.ligacampeonesconcacaf .sap {
+background-position: -327px -5px
+}
+
+.ligacampeonesconcacaf .sfc {
+background-position: -365px -5px
+}
+
+.ligacampeonesconcacaf .tau {
+background-position: -405px -5px
+}
+
+.ligacampeonesconcacaf .tor {
+background-position: -445px -5px
+}
+
+.ligacampeonesconcacaf .ame {
+background-position: -485px -5px
+}
+
+.ligacampeonesconcacaf .gdl {
+background-position: -525px -5px
+}
+
+.ligacampeonesconcacaf .tig {
+background-position: -565px -5px
+}
+
+.ligacampeonesconcacaf .tij {
+background-position: -605px -5px
+}
+
+.ligacampeonesconcacaf .com {
+background-position: -488px -39px
+}
+
+.ligacampeonesconcacaf .pte {
+background-position: -527px -39px
+}
+
+.ligacampeonesconcacaf .caz {
+background-position: -567px -39px
+}
+
+.ligacampeonesconcacaf .leo {
+background-position: -608px -39px
+}
+
+.ligacampeonesconcacaf .nyc {
+background-position: -88px -85px
+}
+
+.ligacampeonesconcacaf .laf {
+background-position: -7px -84px
+}
+
+.ligacampeonesconcacaf .car {
+background-position: -128px -85px
+}
+
+.ligacampeonesconcacaf .mon {
+background-position: -42px -84px
+}
+
+.ligacampeonesconcacaf .por {
+background-position: -169px -84px
+}
+
+.ligacampeonesconcacaf .ala {
+background-position: -207px -84px
+}
+
+.ligacampeonesconcacaf .arc {
+background-position: -247px -84px
+}
+
+.ligacampeonesconcacaf .phi {
+background-position: -287px -84px
+}
+
+.ligacampeonesconcacaf .rea {
+background-position: -326px -84px
+}
+
+.ligacampeonesconcacaf .sdg {
+background-position: -402px -84px
+}
+
+.ligacampeonesconcacaf .gty {
+background-position: -441px -84px
+}
+
+.ligacampeonesconcacaf .frg {
+background-position: -486px -84px
+}
+
+.ligacampeonesconcacaf .pum {
+background-position: -608px -81px
+}
+
+.ligacampeonesconcacaf .cav {
+background-position: -526px -84px
+}
+
+.ligacampeonesconcacaf .ner {
+background-position: -567px -81px
+}
+
+.ligacampeonesconcacaf .atl {
+background-position: -5px -120px
+}
+
+.ligacampeonesconcacaf .aus {
+background-position: -45px -120px
+}
+
+.ligacampeonesconcacaf .orl {
+background-position: -85px -120px
+}
+
+.ligacampeonesconcacaf .pac {
+background-position: -125px -120px
+}
+
+.ligacampeonesconcacaf .clb {
+background-position: -289px -120px
+}
+
+.ligacampeonesconcacaf .res {
+background-position: -165px -120px
+}
+
+.ligacampeonesconcacaf .van {
+background-position: -205px -120px
+}
+
+.ligacampeonesconcacaf .vac {
+background-position: -245px -120px
+}
+
+.confederaciones .aus,
+.confederaciones .chi,
+.confederaciones .Nueva_Zelanda,
+.confederaciones .por,
+.confederaciones .cam,
+.confederaciones .ale,
+.confederaciones .mex,
+.confederaciones .nzl,
+.confederaciones .rus {
+background: url("/modules/custom/scoreboard/images/copa-confederaciones.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.confederaciones .aus {
+background-position: 0 0
+}
+
+.confederaciones .chi {
+background-position: -30px 0
+}
+
+.confederaciones .nzl {
+background-position: -60px 0
+}
+
+.confederaciones .por {
+background-position: -90px 0
+}
+
+.confederaciones .cam {
+background-position: -120px 0
+}
+
+.confederaciones .ale {
+background-position: -150px 0
+}
+
+.confederaciones .mex {
+background-position: -180px 0
+}
+
+.confederaciones .rus {
+background-position: -210px 0
+}
+
+.conmebol .vez,
+.conmebol .uru,
+.conmebol .bol,
+.conmebol .bra,
+.conmebol .col,
+.conmebol .par,
+.conmebol .chi,
+.conmebol .ecu,
+.conmebol .arg,
+.conmebol .pra,
+.conmebol .pru,
+.conmebol .mex,
+.conmebol .usa,
+.conmebol .hai,
+.conmebol .jam,
+.conmebol .aus,
+.conmebol .nzl,
+.conmebol .hon {
+background: url("/modules/custom/scoreboard/images/conmebol.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.conmebol .aus {
+background-position: -5px -5px
+}
+
+.conmebol .nzl {
+background-position: -45px -5px
+}
+
+.conmebol .arg {
+background-position: -85px -5px
+}
+
+.conmebol .bol {
+background-position: -125px -5px
+}
+
+.conmebol .bra {
+background-position: -165px -5px
+}
+
+.conmebol .chi {
+background-position: -205px -5px
+}
+
+.conmebol .col {
+background-position: -245px -5px
+}
+
+.conmebol .crc {
+background-position: -285px -5px
+}
+
+.conmebol .ecu {
+background-position: -325px -5px
+}
+
+.conmebol .hai {
+background-position: -365px -5px
+}
+
+.conmebol .hon {
+background-position: -405px -5px
+}
+
+.conmebol .jam {
+background-position: -440px -5px
+}
+
+.conmebol .mex {
+background-position: -480px -5px
+}
+
+.conmebol .pan {
+background-position: -520px -5px
+}
+
+.conmebol .par {
+background-position: -560px -5px
+}
+
+.conmebol .pru {
+background-position: -600px -5px
+}
+
+.conmebol .uru {
+background-position: -640px -5px
+}
+
+.conmebol .usa {
+background-position: -680px -5px
+}
+
+.conmebol .ven {
+background-position: -720px -5px
+}
+
+.copadelrey .car,
+.copadelrey .sev,
+.copadelrey .elc,
+.copadelrey .atm,
+.copadelrey .mra,
+.copadelrey .bar,
+.copadelrey .fue,
+.copadelrey .rma,
+.copadelrey .for,
+.copadelrey .ath,
+.copadelrey .lle,
+.copadelrey .rso,
+.copadelrey .pon,
+.copadelrey .vil,
+.copadelrey .zar,
+.copadelrey .vlc,
+.copadelrey .num,
+.copadelrey .mla,
+.copadelrey .val,
+.copadelrey .leg,
+.copadelrey .cad,
+.copadelrey .bet,
+.copadelrey .ten,
+.copadelrey .esp,
+.copadelrey .get,
+.copadelrey .ala,
+.copadelrey .dlc,
+.copadelrey .pal,
+.copadelrey .pal,
+.copadelrey .gir,
+.copadelrey .lev,
+.copadelrey .eib,
+.copadelrey .cel,
+.copadelrey .sdg,
+.copadelrey .osa,
+.copadelrey .crb,
+.copadelrey .uni,
+.copadelrey .men,
+.copadelrey .com,
+.copadelrey .idm,
+.copadelrey .nav,
+.copadelrey .cul,
+.copadelrey .lan,
+.copadelrey .log,
+.copadelrey .ger,
+.copadelrey .mir,
+.copadelrey .rac,
+.copadelrey .bko,
+.copadelrey .mul,
+.copadelrey .cal,
+.copadelrey .tor,
+.copadelrey .cor,
+.copadelrey .anr,
+.copadelrey .cas,
+.copadelrey .con,
+.copadelrey .pob,
+.copadelrey .ont,
+.copadelrey .ter,
+.copadelrey .ben,
+.copadelrey .yec,
+.copadelrey .mel,
+.copadelrey .mur,
+.copadelrey .adc,
+.copadelrey .tal,
+.copadelrey .jae,
+.copadelrey .mar,
+.copadelrey .ebr,
+.copadelrey .dur,
+.copadelrey .alm,
+.copadelrey .mal,
+.copadelrey .alc,
+.copadelrey .ovi,
+.copadelrey .ext,
+.copadelrey .reu,
+.copadelrey .vll,
+.copadelrey .bad,
+.copadelrey .cdt,
+.copadelrey .lor,
+.copadelrey .ccf,
+.copadelrey .gim,
+.copadelrey .alb,
+.copadelrey .maj,
+.copadelrey .gra,
+.copadelrey .ray,
+.copadelrey .lug,
+.copadelrey .hue,
+.copadelrey .taa,
+.copadelrey .srt,
+.copadelrey .pgt,
+.copadelrey .cac,
+.copadelrey .ill,
+.copadelrey .hos,
+.copadelrey .cuo,
+.copadelrey .lea,
+.copadelrey .isj,
+.copadelrey .rec,
+.copadelrey .aba,
+.copadelrey .esc,
+.copadelrey .seg,
+.copadelrey .ibz,
+.copadelrey .pea,
+.copadelrey .ber,
+.copadelrey .aao,
+.copadelrey .tls,
+.copadelrey .lei,
+.copadelrey .and,
+.copadelrey .scr,
+.copadelrey .caa,
+.copadelrey .vra,
+.copadelrey .bec,
+.copadelrey .adt,
+.copadelrey .gui,
+.copadelrey .mdl,
+.copadelrey .tar,
+.copadelrey .ped,
+.copadelrey .ryc,
+.copadelrey .por,
+.copadelrey .lob,
+.copadelrey .fra,
+.copadelrey .bqo,
+.copadelrey .urr,
+.copadelrey .ptl,
+.copadelrey .lin,
+.copadelrey .aza,
+.copadelrey .nuc,
+.copadelrey .mer,
+.copadelrey .ori,
+.copadelrey .har,
+.copadelrey .tam,
+.copadelrey .roz {
+background: url("/modules/custom/scoreboard/images/copadelrey.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.copadelrey .mdl {
+background-position: -610px -119px
+}
+
+.copadelrey .tar {
+background-position: -774px -118px
+}
+
+.copadelrey .ped {
+background-position: -46px -119px
+}
+
+.copadelrey .ryc {
+background-position: -253px -119px
+}
+
+.copadelrey .por {
+background-position: -600px -80px
+}
+
+.copadelrey .lob {
+background-position: -1270px -80px
+}
+
+.copadelrey .fra {
+background-position: -1057px -77px
+}
+
+.copadelrey .bqo {
+background-position: -669px -76px
+}
+
+.copadelrey .urr {
+background-position: -506px -119px
+}
+
+.copadelrey .ptl {
+background-position: -145px -118px
+}
+
+.copadelrey .lin {
+background-position: -1233px -81px
+}
+
+.copadelrey .aza {
+background-position: -79px -118px
+}
+
+.copadelrey .nuc {
+background-position: -576px -118px
+}
+
+.copadelrey .mer {
+background-position: -1337px -78px
+}
+
+.copadelrey .ori {
+background-position: -7px -118px
+}
+
+.copadelrey .har {
+background-position: -743px -118px
+}
+
+.copadelrey .tam {
+background-position: -399px -118px
+}
+
+.copadelrey .roz {
+background-position: -1091px -80px
+}
+
+.copadelrey .scr {
+background-position: -329px -119px
+}
+
+.copadelrey .caa {
+background-position: -854px -76px
+}
+
+.copadelrey .vra {
+background-position: -542px -118px
+}
+
+.copadelrey .bec {
+background-position: -706px -79px
+}
+
+.copadelrey .adt {
+background-position: -527px -77px
+}
+
+.copadelrey .ibz {
+background-position: -710px -117px
+}
+
+.copadelrey .pea {
+background-position: -180px -118px
+}
+
+.copadelrey .ber {
+background-position: -742px -78px
+}
+
+.copadelrey .aao {
+background-position: -922px -78px
+}
+
+.copadelrey .tls {
+background-position: -468px -118px
+}
+
+.copadelrey .lei {
+background-position: -1162px -78px
+}
+
+.copadelrey .and {
+background-position: -1020px -79px
+}
+
+.copadelrey .isj {
+background-position: -646px -119px
+}
+
+.copadelrey .rec {
+background-position: -293px -119px
+}
+
+.copadelrey .aba {
+background-position: -564px -78px
+}
+
+.copadelrey .esc {
+background-position: -987px -80px
+}
+
+.copadelrey .seg {
+background-position: -838px -117px
+}
+
+.copadelrey .taa {
+background-position: -433px -118px
+}
+
+.copadelrey .srt {
+background-position: -111px -121px
+}
+
+.copadelrey .pgt {
+background-position: -214px -121px
+}
+
+.copadelrey .cac {
+background-position: -781px -76px
+}
+
+.copadelrey .gui {
+background-position: -804px -119px
+}
+
+.copadelrey .ill {
+background-position: -678px -117px
+}
+
+.copadelrey .hos {
+background-position: -1195px -79px
+}
+
+.copadelrey .cuo {
+background-position: -884px -76px
+}
+
+.copadelrey .lea {
+background-position: -1128px -76px
+}
+
+.copadelrey .car {
+background-position: -81px -78px
+}
+
+.copadelrey .gra {
+background-position: -422px -41px
+}
+
+.copadelrey .maj {
+background-position: -114px -78px
+}
+
+.copadelrey .lug {
+background-position: -227px -78px
+}
+
+.copadelrey .alb {
+background-position: -328px -78px
+}
+
+.copadelrey .gim {
+background-position: -190px -78px
+}
+
+.copadelrey .ccf {
+background-position: -422px -78px
+}
+
+.copadelrey .lor {
+background-position: -492px -43px
+}
+
+.copadelrey .cdt {
+background-position: -113px -43px
+}
+
+.copadelrey .bad {
+background-position: -1251px -43px
+}
+
+.copadelrey .vll {
+background-position: -1169px -43px
+}
+
+.copadelrey .reu {
+background-position: -922px -43px
+}
+
+.copadelrey .ext {
+background-position: -150px -75px
+}
+
+.copadelrey .ovi {
+background-position: -295px -75px
+}
+
+.copadelrey .alc {
+background-position: -361px -75px
+}
+
+.copadelrey .mal {
+background-position: -263px -75px
+}
+
+.copadelrey .alm {
+background-position: -394px -75px
+}
+
+.copadelrey .dur {
+background-position: -44px -77px
+}
+
+.copadelrey .ebr {
+background-position: -44px -44px
+}
+
+.copadelrey .mar {
+background-position: -564px -40px
+}
+
+.copadelrey .jae {
+background-position: -855px -40px
+}
+
+.copadelrey .tal {
+background-position: -1359px -44px
+}
+
+.copadelrey .adc {
+background-position: -80px -44px
+}
+
+.copadelrey .mur {
+background-position: -1047px -42px
+}
+
+.copadelrey .mel {
+background-position: -600px -40px
+}
+
+.copadelrey .yec {
+background-position: -1210px -44px
+}
+
+.copadelrey .ben {
+background-position: -319px -41px
+}
+
+.copadelrey .ter {
+background-position: -1007px -43px
+}
+
+.copadelrey .ont {
+background-position: -4px -78px
+}
+
+.copadelrey .pob {
+background-position: -784px -40px
+}
+
+.copadelrey .con {
+background-position: -218px -44px
+}
+
+.copadelrey .cas {
+background-position: -1323px -43px
+}
+
+.copadelrey .anr {
+background-position: -961px -39px
+}
+
+.copadelrey .cor {
+background-position: -253px -43px
+}
+
+.copadelrey .tor {
+background-position: -387px -43px
+}
+
+.copadelrey .cal {
+background-position: -7px -43px
+}
+
+.copadelrey .mul {
+background-position: -707px -39px
+}
+
+.copadelrey .bko {
+background-position: -1288px -43px
+}
+
+.copadelrey .rac {
+background-position: -821px -43px
+}
+
+.copadelrey .mir {
+background-position: -669px -42px
+}
+
+.copadelrey .ger {
+background-position: -351px -42px
+}
+
+.copadelrey .log {
+background-position: -1087px -42px
+}
+
+.copadelrey .lan {
+background-position: -528px -42px
+}
+
+.copadelrey .cul {
+background-position: -286px -42px
+}
+
+.copadelrey .nav {
+background-position: -748px -41px
+}
+
+.copadelrey .idm {
+background-position: -454px -41px
+}
+
+.copadelrey .com {
+background-position: -187px -43px
+}
+
+.copadelrey .men {
+background-position: -635px -40px
+}
+
+.copadelrey .uni {
+background-position: -1126px -39px
+}
+
+.copadelrey .crb {
+background-position: -150px -44px
+}
+
+.copadelrey .ath {
+background-position: -5px -5px
+}
+
+.copadelrey .cad {
+background-position: -45px -5px
+}
+
+.copadelrey .osa {
+background-position: -85px -5px
+}
+
+.copadelrey .ala {
+background-position: -165px -5px
+}
+
+.copadelrey .elc {
+background-position: -205px -5px
+}
+
+.copadelrey .for {
+background-position: -245px -5px
+}
+
+.copadelrey .fue {
+background-position: -285px -5px
+}
+
+.copadelrey .get {
+background-position: -325px -5px
+}
+
+.copadelrey .lle {
+background-position: -365px -5px
+}
+
+.copadelrey .mla {
+background-position: -405px -5px
+}
+
+.copadelrey .num {
+background-position: -445px -5px
+}
+
+.copadelrey .pon {
+background-position: -485px -5px
+}
+
+.copadelrey .bet {
+background-position: -525px -5px
+}
+
+.copadelrey .cel {
+background-position: -565px -5px
+}
+
+.copadelrey .esp {
+background-position: -605px -5px
+}
+
+.copadelrey .dlc {
+background-position: -645px -5px
+}
+
+.copadelrey .mra {
+background-position: -685px -5px
+}
+
+.copadelrey .sdg {
+background-position: -725px -5px
+}
+
+.copadelrey .val {
+background-position: -765px -5px
+}
+
+.copadelrey .zar {
+background-position: -805px -5px
+}
+
+.copadelrey .rso {
+background-position: -845px -5px
+}
+
+.copadelrey .sev {
+background-position: -885px -5px
+}
+
+.copadelrey .eib {
+background-position: -925px -5px
+}
+
+.copadelrey .ten {
+background-position: -965px -5px
+}
+
+.copadelrey .pal {
+background-position: -1005px -5px
+}
+
+.copadelrey .vlc {
+background-position: -1045px -5px
+}
+
+.copadelrey .vil {
+background-position: -1085px -5px
+}
+
+.copadelrey .ala {
+background-position: -1125px -5px
+}
+
+.copadelrey .bar {
+background-position: -1165px -5px
+}
+
+.copadelrey .atm {
+background-position: -1205px -5px
+}
+
+.copadelrey .gir {
+background-position: -1245px -5px
+}
+
+.copadelrey .leg {
+background-position: -1285px -5px
+}
+
+.copadelrey .lev {
+background-position: -1325px -5px
+}
+
+.copadelrey .rma {
+background-position: -1365px -5px
+}
+
+.copadelrey .ray {
+background-position: -454px -78px
+}
+
+.copadelrey .hue {
+background-position: -492px -76px
+}
+
+.copaoro .gua,
+.copaoro .mar,
+.copaoro .can,
+.copaoro .crc,
+.copaoro .cub,
+.copaoro .cur,
+.copaoro .sal,
+.copaoro .hai,
+.copaoro .hon,
+.copaoro .jam,
+.copaoro .mex,
+.copaoro .nic,
+.copaoro .pan,
+.copaoro .usa,
+.copaoro .ber,
+.copaoro .tyt,
+.copaoro .sur,
+.copaoro .gde,
+.copaoro .qat,
+.copaoro .gra,
+.copaoro .gua,
+.copaoro .skn {
+background: url("/modules/custom/scoreboard/images/copa-oro.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.copaoro .tyt {
+background-position: -35px -40px
+}
+
+.copaoro .ber {
+background-position: -2px -38px
+}
+
+.copaoro .gua {
+background-position: 0 0
+}
+
+.copaoro .mar {
+background-position: -30px 0
+}
+
+.copaoro .can {
+background-position: -60px 0
+}
+
+.copaoro .crc {
+background-position: -90px 0
+}
+
+.copaoro .cub {
+background-position: -120px 0
+}
+
+.copaoro .cur {
+background-position: -150px 0
+}
+
+.copaoro .sal {
+background-position: -180px 0
+}
+
+.copaoro .hai {
+background-position: -210px 0
+}
+
+.copaoro .hon {
+background-position: -240px 0
+}
+
+.copaoro .jam {
+background-position: -270px 0
+}
+
+.copaoro .mex {
+background-position: -300px 0
+}
+
+.copaoro .nic {
+background-position: -330px 0
+}
+
+.copaoro .pan {
+background-position: -360px 0
+}
+
+.copaoro .usa {
+background-position: -390px 0
+}
+
+.copaoro .sur {
+background-position: -89px -40px
+}
+
+.copaoro .gde {
+background-position: -119px -40px
+}
+
+.copaoro .qat {
+background-position: -149px -40px
+}
+
+.copaoro .gra {
+background-position: -180px -41px
+}
+
+.copaoro .gua {
+background-position: -210px -40px
+}
+
+.copaoro .skn {
+background-position: -244px -40px
+}
+
+.espana .ray,
+.espana .vll,
+.espana .hue,
+.espana .ala,
+.espana .ath,
+.espana .atm,
+.espana .bar,
+.espana .cel,
+.espana .dep,
+.espana .eib,
+.espana .esp,
+.espana .get,
+.espana .gir,
+.espana .gra,
+.espana .lpa,
+.espana .leg,
+.espana .lev,
+.espana .mal,
+.espana .osa,
+.espana .spg,
+.espana .bet,
+.espana .rma,
+.espana .rso,
+.espana .bet,
+.espana .sev,
+.espana .val,
+.espana .vil,
+.espana .che,
+.espana .cad,
+.espana .mlc,
+.espana .alm,
+.espana .alv {
+background: url("/modules/custom/scoreboard/images/liga-espanola.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.espana .mlc {
+background-position: -117px -39px
+}
+
+.espana .ray {
+background-position: -44px -36px
+}
+
+.espana .vll {
+background-position: -85px -36px
+}
+
+.espana .hue {
+background-position: -4px -36px
+}
+
+.espana .ala {
+background-position: -5px -5px
+}
+
+.espana .ath {
+background-position: -45px -5px
+}
+
+.espana .atm {
+background-position: -85px -5px
+}
+
+.espana .bar {
+background-position: -125px -5px
+}
+
+.espana .sprite-brighton_and_hove_albion {
+background-position: -165px -5px
+}
+
+.espana .cel {
+background-position: -205px -5px
+}
+
+.espana .dep {
+background-position: -245px -5px
+}
+
+.espana .eib {
+background-position: -285px -5px
+}
+
+.espana .esp {
+background-position: -325px -5px
+}
+
+.espana .get {
+background-position: -365px -5px
+}
+
+.espana .gir {
+background-position: -405px -5px
+}
+
+.espana .gra {
+background-position: -445px -5px
+}
+
+.espana .sprite-huddersfield_town {
+background-position: -485px -5px
+}
+
+.espana .lpa {
+background-position: -525px -5px
+}
+
+.espana .leg {
+background-position: -565px -5px
+}
+
+.espana .lev {
+background-position: -605px -5px
+}
+
+.espana .mal {
+background-position: -645px -5px
+}
+
+.espana .osa {
+background-position: -685px -5px
+}
+
+.espana .spg {
+background-position: -725px -5px
+}
+
+.espana .bet {
+background-position: -765px -5px
+}
+
+.espana .rma {
+background-position: -805px -5px
+}
+
+.espana .rso {
+background-position: -845px -5px
+}
+
+.espana .sev {
+background-position: -885px -5px
+}
+
+.espana .val {
+background-position: -925px -5px
+}
+
+.espana .vil {
+background-position: -965px -5px
+}
+
+.espana .cad {
+background-position: -165px -36px
+}
+
+.espana .che {
+background-position: -205px -36px
+}
+
+.espana .alm {
+background-position: -245px -36px
+}
+
+.espana .alv {
+background-position: -145px -36px
+}
+
+.italia .par,
+.italia .fro,
+.italia .ata,
+.italia .ben,
+.italia .bol,
+.italia .cag,
+.italia .chi,
+.italia .cro,
+.italia .fio,
+.italia .gen,
+.italia .hel,
+.italia .int,
+.italia .juv,
+.italia .laz,
+.italia .mil,
+.italia .nap,
+.italia .rom,
+.italia .sam,
+.italia .sas,
+.italia .spa,
+.italia .tor,
+.italia .udi,
+.italia .eml,
+.italia .lec,
+.italia .bre,
+.italia .spe,
+.italia .ven,
+.italia .sal,
+.italia .cre,
+.italia .mon,
+.italia .com {
+background: url("/modules/custom/scoreboard/images/serie-a.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.italia .par {
+background-position: -39px -34px
+}
+
+.italia .fro {
+background-position: 0px -35px
+}
+
+.italia .ata {
+background-position: 0 0
+}
+
+.italia .ben {
+background-position: -30px 0
+}
+
+.italia .bol {
+background-position: -60px 0
+}
+
+.italia .cag {
+background-position: -90px 0
+}
+
+.italia .chi {
+background-position: -120px 0
+}
+
+.italia .cro {
+background-position: -150px 0
+}
+
+.italia .fio {
+background-position: -180px 0
+}
+
+.italia .gen {
+background-position: -210px 0
+}
+
+.italia .hel {
+background-position: -240px 0
+}
+
+.italia .int {
+background-position: -270px 0
+}
+
+.italia .juv {
+background-position: -300px 0
+}
+
+.italia .laz {
+background-position: -330px 0
+}
+
+.italia .mil {
+background-position: -360px 0
+}
+
+.italia .nap {
+background-position: -390px 0
+}
+
+.italia .rom {
+background-position: -420px 0
+}
+
+.italia .sam {
+background-position: -450px 0
+}
+
+.italia .sas {
+background-position: -480px 0
+}
+
+.italia .spa {
+background-position: -510px 0
+}
+
+.italia .tor {
+background-position: -540px 0
+}
+
+.italia .udi {
+background-position: -570px 0
+}
+
+.italia .eml {
+background-position: -71px -34px
+}
+
+.italia .lec {
+background-position: -102px -34px
+}
+
+.italia .bre {
+background-position: -136px -34px
+}
+
+.italia .spe {
+background-position: -180px -33px
+}
+
+.italia .ven {
+background-position: -271px -30px
+}
+
+.italia .sal {
+background-position: -240px -30px
+}
+
+.italia .cre {
+background-position: -360px -33px
+}
+
+.italia .mon {
+background-position: -330px -30px
+}
+
+.italia .com {
+background-position: -210px -30px
+}
+
+.libertadores .ami,
+.libertadores .ana,
+.libertadores .asu,
+.libertadores .ban,
+.libertadores .bdg,
+.libertadores .bjr,
+.libertadores .bol,
+.libertadores .car,
+.libertadores .cfc,
+.libertadores .cgu,
+.libertadores .cha,
+.libertadores .col,
+.libertadores .cor,
+.libertadores .cpo,
+.libertadores .cru,
+.libertadores .dan,
+.libertadores .del,
+.libertadores .dsc,
+.libertadores .dta,
+.libertadores .dto,
+.libertadores .elp,
+.libertadores .eme,
+.libertadores .fla,
+.libertadores .god,
+.libertadores .gre,
+.libertadores .gua,
+.libertadores .hur,
+.libertadores .idv,
+.libertadores .ind,
+.libertadores .int,
+.libertadores .isf,
+.libertadores .jun,
+.libertadores .lar,
+.libertadores .ldu,
+.libertadores .lib,
+.libertadores .lim,
+.libertadores .mac,
+.libertadores .med,
+.libertadores .mel,
+.libertadores .mil,
+.libertadores .mng,
+.libertadores .nac,
+.libertadores .oli,
+.libertadores .ope,
+.libertadores .pae,
+.libertadores .pal,
+.libertadores .par,
+.libertadores .pen,
+.libertadores .rac,
+.libertadores .rga,
+.libertadores .roc,
+.libertadores .rpl,
+.libertadores .san,
+.libertadores .scr,
+.libertadores .slo,
+.libertadores .spa,
+.libertadores .str,
+.libertadores .swa,
+.libertadores .tdc,
+.libertadores .tuc,
+.libertadores .uca,
+.libertadores .uch,
+.libertadores .udc,
+.libertadores .udd,
+.libertadores .utc,
+.libertadores .vdg,
+.libertadores .wan,
+.libertadores .wil,
+.libertadores .zam,
+.libertadores .csj,
+.libertadores .pro,
+.libertadores .lar,
+.libertadores .dyj,
+.libertadores .adc,
+.libertadores .tig,
+.libertadores .edm,
+.libertadores .bin,
+.libertadores .ren,
+.libertadores .alw,
+.libertadores .flu,
+.libertadores .arg,
+.libertadores .cal,
+.libertadores .vel,
+.libertadores .liv,
+.libertadores .roy,
+.libertadores .aya,
+.libertadores .uni,
+.libertadores .uce,
+.libertadores .mct,
+.libertadores .evm,
+.libertadores .ami,
+.libertadores .pla,
+.libertadores .aud,
+.libertadores .ucv,
+.libertadores .atn,
+.libertadores .mon,
+.libertadores .per {
+background: url("/modules/custom/scoreboard/images/copa-libertadores.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.libertadores .ucv {
+background-position: -256px -238px
+}
+
+.libertadores .aud {
+background-position: -208px -238px
+}
+
+.libertadores .pla {
+background-position: -160px -238px
+}
+
+.libertadores .ami {
+background-position: -107px -238px
+}
+
+.libertadores .evm {
+background-position: -59px -238px
+}
+
+.libertadores .mct {
+background-position: -9px -238px
+}
+
+.libertadores .csj {
+background-position: -758px -155px
+}
+
+.libertadores .ami {
+background-position: -861px -9px
+}
+
+.libertadores .ana {
+background-position: -862px -58px
+}
+
+.libertadores .asu {
+background-position: -860px -107px
+}
+
+.libertadores .ban {
+background-position: -709px -155px
+}
+
+.libertadores .bdg {
+background-position: -659px -156px
+}
+
+.libertadores .bjr {
+background-position: -608px -155px
+}
+
+.libertadores .bol {
+background-position: -558px -157px
+}
+
+.libertadores .car {
+background-position: -509px -158px
+}
+
+.libertadores .cfc {
+background-position: -458px -159px
+}
+
+.libertadores .cgu {
+background-position: -408px -158px
+}
+
+.libertadores .cha {
+background-position: -356px -155px
+}
+
+.libertadores .col {
+background-position: -307px -156px
+}
+
+.libertadores .cor {
+background-position: -257px -155px
+}
+
+.libertadores .cpo {
+background-position: -208px -155px
+}
+
+.libertadores .cru {
+background-position: -158px -155px
+}
+
+.libertadores .dan {
+background-position: -110px -155px
+}
+
+.libertadores .del {
+background-position: -59px -155px
+}
+
+.libertadores .dsc {
+background-position: -10px -155px
+}
+
+.libertadores .dta {
+background-position: -808px -108px
+}
+
+.libertadores .dto {
+background-position: -758px -107px
+}
+
+.libertadores .elp {
+background-position: -710px -105px
+}
+
+.libertadores .eme {
+background-position: -659px -108px
+}
+
+.libertadores .fla {
+background-position: -610px -109px
+}
+
+.libertadores .god {
+background-position: -559px -111px
+}
+
+.libertadores .gre {
+background-position: -511px -107px
+}
+
+.libertadores .gua {
+background-position: -458px -107px
+}
+
+.libertadores .hur {
+background-position: -411px -107px
+}
+
+.libertadores .idv {
+background-position: -357px -110px
+}
+
+.libertadores .ind {
+background-position: -308px -110px
+}
+
+.libertadores .int {
+background-position: -255px -108px
+}
+
+.libertadores .isf {
+background-position: -208px -106px
+}
+
+.libertadores .jun {
+background-position: -160px -109px
+}
+
+.libertadores .lar {
+background-position: -109px -107px
+}
+
+.libertadores .ldu {
+background-position: -58px -109px
+}
+
+.libertadores .lib {
+background-position: -9px -109px
+}
+
+.libertadores .lim {
+background-position: -810px -57px
+}
+
+.libertadores .mac {
+background-position: -756px -59px
+}
+
+.libertadores .med {
+background-position: -708px -59px
+}
+
+.libertadores .mel {
+background-position: -658px -57px
+}
+
+.libertadores .mil {
+background-position: -609px -59px
+}
+
+.libertadores .mng {
+background-position: -558px -60px
+}
+
+.libertadores .nac {
+background-position: -509px -59px
+}
+
+.libertadores .oli {
+background-position: -459px -58px
+}
+
+.libertadores .ope {
+background-position: -411px -59px
+}
+
+.libertadores .pae {
+background-position: -359px -59px
+}
+
+.libertadores .pal {
+background-position: -309px -59px
+}
+
+.libertadores .par {
+background-position: -257px -59px
+}
+
+.libertadores .pen {
+background-position: -207px -61px
+}
+
+.libertadores .rac {
+background-position: -159px -58px
+}
+
+.libertadores .rga {
+background-position: -109px -59px
+}
+
+.libertadores .roc {
+background-position: -59px -60px
+}
+
+.libertadores .rpl {
+background-position: -8px -61px
+}
+
+.libertadores .san {
+background-position: -810px -11px
+}
+
+.libertadores .scr {
+background-position: -756px -9px
+}
+
+.libertadores .slo {
+background-position: -707px -11px
+}
+
+.libertadores .spa {
+background-position: -660px -13px
+}
+
+.libertadores .str {
+background-position: -608px -11px
+}
+
+.libertadores .swa {
+background-position: -556px -12px
+}
+
+.libertadores .tdc {
+background-position: -507px -13px
+}
+
+.libertadores .tuc {
+background-position: -459px -12px
+}
+
+.libertadores .uca {
+background-position: -408px -12px
+}
+
+.libertadores .uch {
+background-position: -357px -11px
+}
+
+.libertadores .udc {
+background-position: -309px -13px
+}
+
+.libertadores .udd {
+background-position: -258px -10px
+}
+
+.libertadores .utc {
+background-position: -208px -10px
+}
+
+.libertadores .vdg {
+background-position: -158px -10px
+}
+
+.libertadores .wan {
+background-position: -106px -9px
+}
+
+.libertadores .wil {
+background-position: -58px -8px
+}
+
+.libertadores .zam {
+background-position: -9px -11px
+}
+
+.libertadores .adc {
+background-position: -9px -194px
+}
+
+.libertadores .lar {
+background-position: -59px -194px
+}
+
+.libertadores .dyj {
+background-position: -110px -194px
+}
+
+.libertadores .bin {
+background-position: -159px -194px
+}
+
+.libertadores .edm {
+background-position: -209px -194px
+}
+
+.libertadores .pro {
+background-position: -255px -194px
+}
+
+.libertadores .tig {
+background-position: -305px -194px
+}
+
+.libertadores .ren {
+background-position: -757px -193px
+}
+
+.libertadores .alw {
+background-position: -610px -193px
+}
+
+.libertadores .flu {
+background-position: -858px -193px
+}
+
+.libertadores .arg {
+background-position: -658px -193px
+}
+
+.libertadores .cal {
+background-position: -806px -193px
+}
+
+.libertadores .vel {
+background-position: -709px -193px
+}
+
+.libertadores .liv {
+background-position: -359px -193px
+}
+
+.libertadores .roy {
+background-position: -456px -193px
+}
+
+.libertadores .aya {
+background-position: -562px -193px
+}
+
+.libertadores .uni {
+background-position: -508px -193px
+}
+
+.libertadores .uce {
+background-position: -409px -193px
+}
+
+.libertadores .atn {
+background-position: -862px -58px
+}
+
+.libertadores .per {
+background-position: -302px -243px
+}
+
+.francia .rei,
+.francia .nim,
+.francia .ste,
+.francia .ami,
+.francia .ang,
+.francia .dij,
+.francia .tro,
+.francia .bdx,
+.francia .ggp,
+.francia .ggp,
+.francia .lil,
+.francia .mtz,
+.francia .mnc,
+.francia .mll,
+.francia .nan,
+.francia .nce,
+.francia .nan,
+.francia .lyo,
+.francia .mrs,
+.francia .psg,
+.francia .can,
+.francia .rnn,
+.francia .str,
+.francia .tou,
+.francia .bre,
+.francia .lri,
+.francia .len,
+.francia .cle,
+.francia .aja,
+.francia .aux,
+.francia .avr {
+background: url("/modules/custom/scoreboard/images/league-1.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.francia .bre {
+background-position: -63px -37px
+}
+
+.francia .rei {
+background-position: -32px -37px
+}
+
+.francia .nim {
+background-position: 0px -37px
+}
+
+.francia .ste {
+background-position: 0 0
+}
+
+.francia .ami {
+background-position: -30px 0
+}
+
+.francia .ang {
+background-position: -60px 0
+}
+
+.francia .dij {
+background-position: -90px 0
+}
+
+.francia .tro {
+background-position: -120px 0
+}
+
+.francia .bdx {
+background-position: -150px 0
+}
+
+.francia .ggp {
+background-position: -180px 0
+}
+
+.francia .lil {
+background-position: -210px 0
+}
+
+.francia .mtz {
+background-position: -240px 0
+}
+
+.francia .mnc {
+background-position: -270px 0
+}
+
+.francia .mll {
+background-position: -300px 0
+}
+
+.francia .nan {
+background-position: -330px 0
+}
+
+.francia .nce {
+background-position: -360px 0
+}
+
+.francia .lyo {
+background-position: -390px 0
+}
+
+.francia .mrs {
+background-position: -420px 0
+}
+
+.francia .psg {
+background-position: -450px 0
+}
+
+.francia .can {
+background-position: -480px 0
+}
+
+.francia .rnn {
+background-position: -510px 0
+}
+
+.francia .str {
+background-position: -540px 0
+}
+
+.francia .tou {
+background-position: -570px 0
+}
+
+.francia .lri {
+background-position: -121px -37px
+}
+
+.francia .len {
+background-position: -149px -37px
+}
+
+.francia .cle {
+background-position: -182px -37px
+}
+
+.francia .aja {
+background-position: -240px -37px
+}
+
+.francia .aux {
+background-position: -270px -37px
+}
+
+.francia .avr {
+background-position: -302px -37px
+}
+
+.mexico .nec,
+.mexico .dor,
+.mexico .qro,
+.mexico .atl,
+.mexico .ver,
+.mexico .ame,
+.mexico .san,
+.mexico .tig,
+.mexico .caz,
+.mexico .tij,
+.mexico .mty,
+.mexico .leo,
+.mexico .pac,
+.mexico .mor,
+.mexico .pum,
+.mexico .pue,
+.mexico .gdl,
+.mexico .jag,
+.mexico .tol,
+.mexico .que,
+.mexico .lob,
+.mexico .jua,
+.mexico .slp,
+.mexico .maz,
+.mexico .tmp {
+background: url("/modules/custom/scoreboard/images/sprite-ligamx.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.mexico .nec {
+background-position: -300px 0
+}
+
+.mexico .dor {
+background-position: -150px 0
+}
+
+.mexico .qro {
+background-position: 0 0
+}
+
+.mexico .atl {
+background-position: -30px 0
+}
+
+.mexico .ver {
+background-position: -540px 0
+}
+
+.mexico .ame {
+background-position: 0 0
+}
+
+.mexico .san {
+background-position: -450px 0
+}
+
+.mexico .tig {
+background-position: -480px 0
+}
+
+.mexico .caz {
+background-position: -120px -4px
+}
+
+.mexico .tij {
+background-position: -570px 0
+}
+
+.mexico .mty {
+background-position: -270px 0
+}
+
+.mexico .leo {
+background-position: -180px 0
+}
+
+.mexico .pac {
+background-position: -330px 0
+}
+
+.mexico .mor {
+background-position: -240px 0
+}
+
+.mexico .pum {
+background-position: -390px 0
+}
+
+.mexico .pue {
+background-position: -360px 0
+}
+
+.mexico .gdl {
+background-position: -90px 0
+}
+
+.mexico .jag {
+background-position: -60px 0
+}
+
+.mexico .tol {
+background-position: -510px 0
+}
+
+.mexico .que {
+background-position: -420px 0
+}
+
+.mexico .lob {
+background-position: -211px 0
+}
+
+.mexico .jua {
+background-position: -34px -37px
+}
+
+.mexico .slp {
+background-position: 0 -37px
+}
+
+.mexico .maz {
+background-position: -89px -37px
+}
+
+.mexico .tmp {
+background-position: 0 0
+}
+
+.mundialqatar .qat,
+.mundialqatar .ecu,
+.mundialqatar .sen,
+.mundialqatar .hol,
+.mundialqatar .ing,
+.mundialqatar .ira,
+.mundialqatar .usa,
+.mundialqatar .gal,
+.mundialqatar .arg,
+.mundialqatar .asa,
+.mundialqatar .mex,
+.mundialqatar .pol,
+.mundialqatar .fra,
+.mundialqatar .aus,
+.mundialqatar .din,
+.mundialqatar .tun,
+.mundialqatar .esp,
+.mundialqatar .crc,
+.mundialqatar .ale,
+.mundialqatar .jpn,
+.mundialqatar .bel,
+.mundialqatar .can,
+.mundialqatar .mrr,
+.mundialqatar .cro,
+.mundialqatar .bra,
+.mundialqatar .srb,
+.mundialqatar .sui,
+.mundialqatar .cam,
+.mundialqatar .por,
+.mundialqatar .gha,
+.mundialqatar .uru,
+.mundialqatar .csr {
+background: url("/modules/custom/scoreboard/images/mundial-qatar.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.mundialqatar .qat {
+background-position: -4px -5px
+}
+
+.mundialqatar .ecu {
+background-position: -39px -5px
+}
+
+.mundialqatar .sen {
+background-position: -75px -5px
+}
+
+.mundialqatar .hol {
+background-position: -110px -5px
+}
+
+.mundialqatar .ing {
+background-position: -4px -40px
+}
+
+.mundialqatar .ira {
+background-position: -39px -40px
+}
+
+.mundialqatar .usa {
+background-position: -75px -40px
+}
+
+.mundialqatar .gal {
+background-position: -110px -40px
+}
+
+.mundialqatar .arg {
+background-position: -4px -75px
+}
+
+.mundialqatar .asa {
+background-position: -39px -75px
+}
+
+.mundialqatar .mex {
+background-position: -75px -75px
+}
+
+.mundialqatar .pol {
+background-position: -110px -75px
+}
+
+.mundialqatar .fra {
+background-position: -4px -110px
+}
+
+.mundialqatar .aus {
+background-position: -39px -110px
+}
+
+.mundialqatar .din {
+background-position: -75px -110px
+}
+
+.mundialqatar .tun {
+background-position: -110px -110px
+}
+
+.mundialqatar .esp {
+background-position: -4px -145px
+}
+
+.mundialqatar .crc {
+background-position: -39px -145px
+}
+
+.mundialqatar .ale {
+background-position: -75px -145px
+}
+
+.mundialqatar .jpn {
+background-position: -110px -145px
+}
+
+.mundialqatar .bel {
+background-position: -4px -180px
+}
+
+.mundialqatar .can {
+background-position: -39px -180px
+}
+
+.mundialqatar .mrr {
+background-position: -75px -180px
+}
+
+.mundialqatar .cro {
+background-position: -110px -180px
+}
+
+.mundialqatar .bra {
+background-position: -4px -215px
+}
+
+.mundialqatar .srb {
+background-position: -39px -215px
+}
+
+.mundialqatar .sui {
+background-position: -75px -215px
+}
+
+.mundialqatar .cam {
+background-position: -110px -215px
+}
+
+.mundialqatar .por {
+background-position: -4px -250px
+}
+
+.mundialqatar .gha {
+background-position: -39px -250px
+}
+
+.mundialqatar .uru {
+background-position: -75px -250px
+}
+
+.mundialqatar .csr {
+background-position: -110px -250px
+}
+
+.nba .mil,
+.nba .bos,
+.nba .chi,
+.nba .atl,
+.nba .dal,
+.nba .por,
+.nba .lac,
+.nba .sac,
+.nba .cha,
+.nba .ind,
+.nba .phi,
+.nba .was,
+.nba .pho,
+.nba .mia,
+.nba .det,
+.nba .mnn,
+.nba .bro,
+.nba .san,
+.nba .okl,
+.nba .gol,
+.nba .lal,
+.nba .nyk,
+.nba .hou,
+.nba .mem,
+.nba .orl,
+.nba .nop,
+.nba .den,
+.nba .tor,
+.nba .uta,
+.nba .cle,
+.nba .est,
+.nba .oes,
+.nba .mel,
+.nba .fll,
+.nba .mac,
+.nba .zea,
+.nba .per,
+.nba .sha,
+.nba .sks,
+.nba .ade,
+.nba .bei,
+.nba .reg,
+.nba .gia,
+.nba .wld,
+.nba .usa,
+.nba .sla,
+.nba .fra {
+background: url("/modules/custom/scoreboard/images/nba.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.nba .mil {
+background-position: -645px -5px
+}
+
+.nba .bos {
+background-position: -45px -5px
+}
+
+.nba .chi {
+background-position: -165px -5px
+}
+
+.nba .atl {
+background-position: -5px -5px
+}
+
+.nba .dal {
+background-position: -245px -5px
+}
+
+.nba .por {
+background-position: -965px -5px
+}
+
+.nba .lac {
+background-position: -485px -5px
+}
+
+.nba .sac {
+background-position: -1005px -5px
+}
+
+.nba .cha {
+background-position: -125px -5px
+}
+
+.nba .ind {
+background-position: -445px -5px
+}
+
+.nba .phi {
+background-position: -885px -5px
+}
+
+.nba .was {
+background-position: -1165px -5px
+}
+
+.nba .pho {
+background-position: -925px -5px
+}
+
+.nba .mia {
+background-position: -605px -5px
+}
+
+.nba .det {
+background-position: -325px -5px
+}
+
+.nba .mnn {
+background-position: -685px -5px
+}
+
+.nba .bro {
+background-position: -85px -5px
+}
+
+.nba .san {
+background-position: -1045px -5px
+}
+
+.nba .okl {
+background-position: -805px -5px
+}
+
+.nba .gol {
+background-position: -365px -5px
+}
+
+.nba .lal {
+background-position: -525px -5px
+}
+
+.nba .nyk {
+background-position: -765px -5px
+}
+
+.nba .hou {
+background-position: -405px -5px
+}
+
+.nba .mem {
+background-position: -565px -5px
+}
+
+.nba .orl {
+background-position: -845px -5px
+}
+
+.nba .nop {
+background-position: -725px -5px
+}
+
+.nba .den {
+background-position: -285px -5px
+}
+
+.nba .tor {
+background-position: -1085px -5px
+}
+
+.nba .uta {
+background-position: -1125px -5px
+}
+
+.nba .cle {
+background-position: -205px -5px
+}
+
+.nba .est {
+background-position: -1205px -5px
+}
+
+.nba .oes {
+background-position: -1245px -5px
+}
+
+.nba .mel {
+background-position: -85px -42px
+}
+
+.nba .fll {
+background-position: -5px -42px
+}
+
+.nba .mac {
+background-position: -44px -42px
+}
+
+.nba .zea {
+background-position: -126px -42px
+}
+
+.nba .per {
+background-position: -164px -42px
+}
+
+.nba .sha {
+background-position: -206px -42px
+}
+
+.nba .sks {
+background-position: -246px -42px
+}
+
+.nba .ade {
+background-position: -286px -42px
+}
+
+.nba .bei {
+background-position: -327px -42px
+}
+
+.nba .reg {
+background-position: -365px -42px
+}
+
+.nba .gia {
+background-position: -406px -42px
+}
+
+.nba .wld {
+background-position: -525px -42px
+}
+
+.nba .usa {
+background-position: -486px -42px
+}
+
+.nba .sla {
+background-position: -565px -42px
+}
+
+.nba .fra {
+background-position: -602px -43px
+}
+
+.nfl .cin,
+.nfl .hou,
+.nfl .car,
+.nfl .buf,
+.nfl .ind,
+.nfl .ari,
+.nfl .jac,
+.nfl .ten,
+.nfl .kcc,
+.nfl .phi,
+.nfl .nos,
+.nfl .nep,
+.nfl .pit,
+.nfl .min,
+.nfl .tbb,
+.nfl .chi,
+.nfl .bal,
+.nfl .lac,
+.nfl .mia,
+.nfl .lve,
+.nfl .nyj,
+.nfl .den,
+.nfl .dal,
+.nfl .lar,
+.nfl .was,
+.nfl .sea,
+.nfl .sff,
+.nfl .atl,
+.nfl .gbp,
+.nfl .nyg,
+.nfl .det,
+.nfl .pit,
+.nfl .bal,
+.nfl .bal,
+.nfl .cle,
+.nfl .afc,
+.nfl .sdc,
+.nfl .nfc {
+background: url("/modules/custom/scoreboard/images/sprite-nfl.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.nfl .sff {
+background-position: -5px -5px
+}
+
+.nfl .atl {
+background-position: -45px -5px
+}
+
+.nfl .ari {
+background-position: -85px -5px
+}
+
+.nfl .bal {
+background-position: -125px -5px
+}
+
+.nfl .cin {
+background-position: -165px -5px
+}
+
+.nfl .tbb {
+background-position: -205px -5px
+}
+
+.nfl .buf {
+background-position: -245px -5px
+}
+
+.nfl .lac {
+background-position: -285px -5px
+}
+
+.nfl .chi {
+background-position: -325px -5px
+}
+
+.nfl .kcc {
+background-position: -365px -5px
+}
+
+.nfl .cle {
+background-position: -405px -5px
+}
+
+.nfl .ind {
+background-position: -445px -5px
+}
+
+.nfl .dal {
+background-position: -485px -5px
+}
+
+.nfl .den {
+background-position: -525px -5px
+}
+
+.nfl .det {
+background-position: -565px -5px
+}
+
+.nfl .nyg {
+background-position: -605px -5px
+}
+
+.nfl .hou {
+background-position: -645px -5px
+}
+
+.nfl .jac {
+background-position: -685px -5px
+}
+
+.nfl .mia {
+background-position: -725px -5px
+}
+
+.nfl .nos {
+background-position: -765px -5px
+}
+
+.nfl .nyj {
+background-position: -805px -5px
+}
+
+.nfl .gbp {
+background-position: -845px -5px
+}
+
+.nfl .car {
+background-position: -885px -5px
+}
+
+.nfl .nep {
+background-position: -925px -5px
+}
+
+.nfl .phi {
+background-position: -965px -5px
+}
+
+.nfl .lve {
+background-position: -1005px -5px
+}
+
+.nfl .was {
+background-position: -1045px -5px
+}
+
+.nfl .sea {
+background-position: -1085px -5px
+}
+
+.nfl .pit {
+background-position: -1125px -5px
+}
+
+.nfl .lar {
+background-position: -1165px -5px
+}
+
+.nfl .ten {
+background-position: -1205px -5px
+}
+
+.nfl .min {
+background-position: -1245px -5px
+}
+
+.nfl .afc {
+background-position: -1285px -5px
+}
+
+.nfl .nfc {
+background-position: -1325px -5px
+}
+
+.nfl .sdc {
+background-position: -286px -5px
+}
+
+.premierleague .wan,
+.premierleague .car,
+.premierleague .ful,
+.premierleague .bou,
+.premierleague .ars,
+.premierleague .bha,
+.premierleague .bly,
+.premierleague .bou,
+.premierleague .che,
+.premierleague .whu,
+.premierleague .cry,
+.premierleague .eve,
+.premierleague .hud,
+.premierleague .lcy,
+.premierleague .liv,
+.premierleague .mcy,
+.premierleague .liv,
+.premierleague .man,
+.premierleague .new,
+.premierleague .sou,
+.premierleague .sto,
+.premierleague .swa,
+.premierleague .tot,
+.premierleague .wat,
+.premierleague .wba,
+.premierleague .she,
+.premierleague .nor,
+.premierleague .lee,
+.premierleague .ast,
+.premierleague .bre,
+.premierleague .for,
+.premierleague .lut,
+.premierleague .ips {
+background: url("/modules/custom/scoreboard/images/liga-premiere.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.premierleague .she {
+background-position: -95px -37px
+}
+
+.premierleague .wan {
+background-position: -32px -40px
+}
+
+.premierleague .ful {
+background-position: 0px -40px
+}
+
+.premierleague .car {
+background-position: -64px -40px
+}
+
+.premierleague .bou {
+background-position: 0 0
+}
+
+.premierleague .ars {
+background-position: -30px 0
+}
+
+.premierleague .bha {
+background-position: -60px 0
+}
+
+.premierleague .bly {
+background-position: -90px 0
+}
+
+.premierleague .che {
+background-position: -120px 0
+}
+
+.premierleague .cry {
+background-position: -150px 0
+}
+
+.premierleague .eve {
+background-position: -180px 0
+}
+
+.premierleague .hud {
+background-position: -210px 0
+}
+
+.premierleague .lcy {
+background-position: -240px 0
+}
+
+.premierleague .liv {
+background-position: -270px 0
+}
+
+.premierleague .mcy {
+background-position: -300px 0
+}
+
+.premierleague .man {
+background-position: -330px 0
+}
+
+.premierleague .new {
+background-position: -360px 0
+}
+
+.premierleague .sou {
+background-position: -390px 0
+}
+
+.premierleague .sto {
+background-position: -420px 0
+}
+
+.premierleague .swa {
+background-position: -450px 0
+}
+
+.premierleague .tot {
+background-position: -480px 0
+}
+
+.premierleague .wat {
+background-position: -510px 0
+}
+
+.premierleague .wba {
+background-position: -540px 0
+}
+
+.premierleague .whu {
+background-position: -570px 0
+}
+
+.premierleague .nor {
+background-position: -128px -40px
+}
+
+.premierleague .ast {
+background-position: -165px -40px
+}
+
+.premierleague .lee {
+background-position: -209px -36px
+}
+
+.premierleague .bre {
+background-position: -241px -38px
+}
+
+.premierleague .for {
+background-position: -270px -38px
+}
+
+.premierleague .lut {
+background-position: -299px -35px
+}
+
+.premierleague .ips {
+background-position: -330px -34px
+}
+
+.uefa .ajx,
+.uefa .val,
+.uefa .shk,
+.uefa .bru,
+.uefa .ben,
+.uefa .gal,
+.uefa .int,
+.uefa .trn,
+.uefa .vor,
+.uefa .sta,
+.uefa .sar,
+.uefa .sev,
+.uefa .ren,
+.uefa .rap,
+.uefa .ran,
+.uefa .pao,
+.uefa .bet,
+.uefa .oly,
+.uefa .fen,
+.uefa .vid,
+.uefa .mal,
+.uefa .krc,
+.uefa .qar,
+.uefa .jab,
+.uefa .zur,
+.uefa .kra,
+.uefa .f91,
+.uefa .ein,
+.uefa .zag,
+.uefa .che,
+.uefa .box,
+.uefa .bks,
+.uefa .blk,
+.uefa .anb,
+.uefa .akh,
+.uefa .lar,
+.uefa .aek,
+.uefa .apo,
+.uefa .ata,
+.uefa .atl,
+.uefa .aus,
+.uefa .bat,
+.uefa .byb,
+.uefa .cel,
+.uefa .crv,
+.uefa .dyn,
+.uefa .eve,
+.uefa .cop,
+.uefa .kln,
+.uefa .she,
+.uefa .ast,
+.uefa .var,
+.uefa .rij,
+.uefa .hap,
+.uefa .her,
+.uefa .hof,
+.uefa .ist,
+.uefa .kon,
+.uefa .ske,
+.uefa .lok,
+.uefa .lud,
+.uefa .mta,
+.uefa .nic,
+.uefa .lyo,
+.uefa .csk,
+.uefa .pzb,
+.uefa .red,
+.uefa .ros,
+.uefa .sla,
+.uefa .laz,
+.uefa .spa,
+.uefa .spb,
+.uefa .spo,
+.uefa .buc,
+.uefa .vik,
+.uefa .vrl,
+.uefa .vts,
+.uefa .vit,
+.uefa .zen,
+.uefa .zli,
+.uefa .zor,
+.uefa .zul,
+.uefa .ars,
+.uefa .atm,
+.uefa .bor,
+.uefa .lug,
+.uefa .mil,
+.uefa .nap,
+.uefa .mar,
+.uefa .ost,
+.uefa .rbl,
+.uefa .rso,
+.uefa .bas,
+.uefa .get,
+.uefa .tra,
+.uefa .psv,
+.uefa .las,
+.uefa .cfr,
+.uefa .wol,
+.uefa .sba,
+.uefa .man,
+.uefa .alk,
+.uefa .por,
+.uefa .fyn,
+.uefa .esp,
+.uefa .fer,
+.uefa .vfl,
+.uefa .ole,
+.uefa .kaa,
+.uefa .eti,
+.uefa .rom,
+.uefa .bss,
+.uefa .pel,
+.uefa .sof,
+.uefa .dun,
+.uefa .mol,
+.uefa .lec,
+.uefa .gra,
+.uefa .omn,
+.uefa .slo,
+.uefa .lcy,
+.uefa .spp,
+.uefa .lil,
+.uefa .siv,
+.uefa .tot,
+.uefa .leg,
+.uefa .fcm,
+.uefa .whu,
+.uefa .mon,
+.uefa .spg,
+.uefa .bny,
+.uefa .bar,
+.uefa .ber,
+.uefa .juv,
+.uefa .nan,
+.uefa .fri,
+.uefa .pan,
+.uefa .lsk,
+.uefa .liv,
+.uefa .tsc,
+.uefa .bha,
+.uefa .usg,
+.uefa .tou,
+.uefa .mac,
+.uefa .ser,
+.uefa .hac,
+.uefa .ali,
+.uefa .rak,
+.uefa .you,
+.uefa .len,
+.uefa .fcg,
+.uefa .art,
+.uefa .rfs,
+.uefa .elf,
+.uefa .ath,
+.uefa .twe,
+.uefa .bod {
+background: url("/modules/custom/scoreboard/images/eufa-v2.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.uefa .ajx {
+background-position: -204px -89px
+}
+
+.uefa .val {
+background-position: -1539px -46px
+}
+
+.uefa .shk {
+background-position: -1503px -44px
+}
+
+.uefa .bru {
+background-position: -1468px -44px
+}
+
+.uefa .ben {
+background-position: -1428px -44px
+}
+
+.uefa .gal {
+background-position: -1392px -44px
+}
+
+.uefa .int {
+background-position: -1351px -44px
+}
+
+.uefa .trn {
+background-position: -1147px -48px
+}
+
+.uefa .vor {
+background-position: -1228px -48px
+}
+
+.uefa .sta {
+background-position: -1187px -46px
+}
+
+.uefa .sar {
+background-position: -1058px -49px
+}
+
+.uefa .sev {
+background-position: -1106px -49px
+}
+
+.uefa .ren {
+background-position: -1018px -51px
+}
+
+.uefa .rap {
+background-position: -975px -51px
+}
+
+.uefa .ran {
+background-position: -929px -51px
+}
+
+.uefa .pao {
+background-position: -891px -50px
+}
+
+.uefa .bet {
+background-position: -849px -50px
+}
+
+.uefa .oly {
+background-position: -1270px -46px
+}
+
+.uefa .fen {
+background-position: -1309px -45px
+}
+
+.uefa .vid {
+background-position: -768px -50px
+}
+
+.uefa .mal {
+background-position: -727px -50px
+}
+
+.uefa .krc {
+background-position: -634px -50px
+}
+
+.uefa .qar {
+background-position: -588px -50px
+}
+
+.uefa .jab {
+background-position: -543px -50px
+}
+
+.uefa .zur {
+background-position: -496px -47px
+}
+
+.uefa .kra {
+background-position: -451px -47px
+}
+
+.uefa .f91 {
+background-position: -370px -47px
+}
+
+.uefa .ein {
+background-position: -329px -46px
+}
+
+.uefa .zag {
+background-position: -287px -48px
+}
+
+.uefa .che {
+background-position: -244px -48px
+}
+
+.uefa .box {
+background-position: -203px -48px
+}
+
+.uefa .bks {
+background-position: -165px -48px
+}
+
+.uefa .blk {
+background-position: -126px -48px
+}
+
+.uefa .anb {
+background-position: -84px -48px
+}
+
+.uefa .akh {
+background-position: -45px -48px
+}
+
+.uefa .lar {
+background-position: -5px -48px
+}
+
+.uefa .aek {
+background-position: -5px -5px
+}
+
+.uefa .apo {
+background-position: -45px -5px
+}
+
+.uefa .ata {
+background-position: -85px -5px
+}
+
+.uefa .atl {
+background-position: -125px -5px
+}
+
+.uefa .aus {
+background-position: -165px -5px
+}
+
+.uefa .bat {
+background-position: -205px -5px
+}
+
+.uefa .byb {
+background-position: -245px -5px
+}
+
+.uefa .cel {
+background-position: -285px -5px
+}
+
+.uefa .crv {
+background-position: -325px -5px
+}
+
+.uefa .dyn {
+background-position: -365px -5px
+}
+
+.uefa .eve {
+background-position: -405px -5px
+}
+
+.uefa .cop {
+background-position: -445px -5px
+}
+
+.uefa .kln {
+background-position: -485px -5px
+}
+
+.uefa .she {
+background-position: -525px -5px
+}
+
+.uefa .ast {
+background-position: -565px -5px
+}
+
+.uefa .var {
+background-position: -605px -5px
+}
+
+.uefa .rij {
+background-position: -645px -5px
+}
+
+.uefa .hap {
+background-position: -685px -5px
+}
+
+.uefa .her {
+background-position: -725px -5px
+}
+
+.uefa .hof {
+background-position: -765px -5px
+}
+
+.uefa .ist {
+background-position: -805px -5px
+}
+
+.uefa .kon {
+background-position: -845px -5px
+}
+
+.uefa .ske {
+background-position: -885px -5px
+}
+
+.uefa .lok {
+background-position: -925px -5px
+}
+
+.uefa .lud {
+background-position: -965px -5px
+}
+
+.uefa .mta {
+background-position: -1005px -5px
+}
+
+.uefa .nic {
+background-position: -1045px -5px
+}
+
+.uefa .lyo {
+background-position: -1085px -5px
+}
+
+.uefa .csk {
+background-position: -1125px -5px
+}
+
+.uefa .pzb {
+background-position: -1165px -5px
+}
+
+.uefa .red {
+background-position: -1205px -5px
+}
+
+.uefa .ros {
+background-position: -1245px -5px
+}
+
+.uefa .sla {
+background-position: -1285px -5px
+}
+
+.uefa .laz {
+background-position: -1325px -5px
+}
+
+.uefa .spa {
+background-position: -1365px -5px
+}
+
+.uefa .spb {
+background-position: -1405px -5px
+}
+
+.uefa .spo {
+background-position: -1445px -5px
+}
+
+.uefa .buc {
+background-position: -1485px -5px
+}
+
+.uefa .vik {
+background-position: -1525px -5px
+}
+
+.uefa .vrl {
+background-position: -1565px -5px
+}
+
+.uefa .vts {
+background-position: -1605px -5px
+}
+
+.uefa .vit {
+background-position: -1645px -5px
+}
+
+.uefa .zen {
+background-position: -1685px -5px
+}
+
+.uefa .zli {
+background-position: -1725px -5px
+}
+
+.uefa .zor {
+background-position: -1765px -5px
+}
+
+.uefa .zul {
+background-position: -1805px -5px
+}
+
+.uefa .ars {
+background-position: -1845px -5px
+}
+
+.uefa .atm {
+background-position: -1885px -5px
+}
+
+.uefa .bor {
+background-position: -1925px -5px
+}
+
+.uefa .lug {
+background-position: -1965px -5px
+}
+
+.uefa .mil {
+background-position: -2005px -5px
+}
+
+.uefa .nap {
+background-position: -2045px -5px
+}
+
+.uefa .mar {
+background-position: -2085px -5px
+}
+
+.uefa .ost {
+background-position: -2125px -5px
+}
+
+.uefa .rbl {
+background-position: -2165px -5px
+}
+
+.uefa .rso {
+background-position: -2205px -5px
+}
+
+.uefa .bas {
+background-position: -1808px -47px
+}
+
+.uefa .get {
+background-position: -2045px -50px
+}
+
+.uefa .tra {
+background-position: -1644px -47px
+}
+
+.uefa .psv {
+background-position: -85px -89px
+}
+
+.uefa .las {
+background-position: -2127px -48px
+}
+
+.uefa .cfr {
+background-position: -1885px -45px
+}
+
+.uefa .wol {
+background-position: -1725px -47px
+}
+
+.uefa .sba {
+background-position: -1574px -45px
+}
+
+.uefa .man {
+background-position: -2167px -50px
+}
+
+.uefa .alk {
+background-position: -1767px -48px
+}
+
+.uefa .por {
+background-position: -47px -93px
+}
+
+.uefa .fyn {
+background-position: -2007px -49px
+}
+
+.uefa .esp {
+background-position: -1926px -45px
+}
+
+.uefa .fer {
+background-position: -1967px -48px
+}
+
+.uefa .vfl {
+background-position: -1684px -48px
+}
+
+.uefa .ole {
+background-position: -7px -93px
+}
+
+.uefa .kaa {
+background-position: -2090px -49px
+}
+
+.uefa .eti {
+background-position: -1610px -45px
+}
+
+.uefa .rom {
+background-position: -124px -89px
+}
+
+.uefa .bss {
+background-position: -1846px -48px
+}
+
+.uefa .pel {
+background-position: -163px -90px
+}
+
+.uefa .sof {
+background-position: -243px -89px
+}
+
+.uefa .dun {
+background-position: -285px -89px
+}
+
+.uefa .mol {
+background-position: -326px -89px
+}
+
+.uefa .lec {
+background-position: -370px -89px
+}
+
+.uefa .gra {
+background-position: -406px -89px
+}
+
+.uefa .omn {
+background-position: -453px -89px
+}
+
+.uefa .slo {
+background-position: -495px -89px
+}
+
+.uefa .lcy {
+background-position: -541px -89px
+}
+
+.uefa .spp {
+background-position: -586px -89px
+}
+
+.uefa .lil {
+background-position: -634px -89px
+}
+
+.uefa .siv {
+background-position: -681px -89px
+}
+
+.uefa .tot {
+background-position: -729px -89px
+}
+
+.uefa .leg {
+background-position: -766px -89px
+}
+
+.uefa .fcm {
+background-position: -806px -89px
+}
+
+.uefa .whu {
+background-position: -849px -89px
+}
+
+.uefa .mon {
+background-position: -893px -89px
+}
+
+.uefa .spg {
+background-position: -930px -89px
+}
+
+.uefa .bny {
+background-position: -975px -89px
+}
+
+.uefa .bar {
+background-position: -1019px -87px
+}
+
+.uefa .ber {
+background-position: -1060px -89px
+}
+
+.uefa .juv {
+background-position: -1105px -89px
+}
+
+.uefa .nan {
+background-position: -1148px -88px
+}
+
+.uefa .fri {
+background-position: -1188px -88px
+}
+
+.uefa .pan {
+background-position: -452px -88px
+}
+
+.uefa .lsk {
+background-position: -1220px -88px
+}
+
+.uefa .liv {
+background-position: -1263px -88px
+}
+
+.uefa .tsc {
+background-position: -1298px -88px
+}
+
+.uefa .bha {
+background-position: -1340px -85px
+}
+
+.uefa .usg {
+background-position: -1380px -88px
+}
+
+.uefa .tou {
+background-position: -1420px -88px
+}
+
+.uefa .mac {
+background-position: -1460px -88px
+}
+
+.uefa .ser {
+background-position: -1500px -88px
+}
+
+.uefa .hac {
+background-position: -1535px -88px
+}
+
+.uefa .ali {
+background-position: -1574px -88px
+}
+
+.uefa .rak {
+background-position: -1610px -88px
+}
+
+.uefa .you {
+background-position: -240px -5px
+}
+
+.uefa .len {
+background-position: -1642px -88px
+}
+
+.uefa .fcg {
+background-position: -1768px -81px
+}
+
+.uefa .art {
+background-position: -83px -48px
+}
+
+.uefa .rfs {
+background-position: -1809px -81px
+}
+
+.uefa .elf {
+background-position: -1725px -81px
+}
+
+.uefa .ath {
+background-position: -125px -5px
+}
+
+.uefa .twe {
+background-position: -1860px -81px
+}
+
+.uefa .bod {
+background-position: -1682px -85px
+}
+
+.mlb .det,
+.mlb .hou,
+.mlb .iso,
+.mlb .kcr,
+.mlb .laa,
+.mlb .lad,
+.mlb .mem,
+.mlb .mia,
+.mlb .mil,
+.mlb .min,
+.mlb .nas,
+.mlb .nor,
+.mlb .nym,
+.mlb .nyy,
+.mlb .oak,
+.mlb .osc,
+.mlb .phi,
+.mlb .pit,
+.mlb .rrw,
+.mlb .sdp,
+.mlb .sea,
+.mlb .sfg,
+.mlb .slc,
+.mlb .suf,
+.mlb .tbr,
+.mlb .tex,
+.mlb .tor,
+.mlb .was,
+.mlb .ari,
+.mlb .atl,
+.mlb .bal,
+.mlb .bos,
+.mlb .chc,
+.mlb .cin,
+.mlb .cle,
+.mlb .col,
+.mlb .cws,
+.mlb .ame,
+.mlb .nat {
+background: url("/modules/custom/scoreboard/images/mlb.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.mlb .det {
+background-position: -774px -45px
+}
+
+.mlb .hou {
+background-position: -734px -45px
+}
+
+.mlb .iso {
+background-position: -690px -45px
+}
+
+.mlb .kcr {
+background-position: -648px -47px
+}
+
+.mlb .laa {
+background-position: -612px -45px
+}
+
+.mlb .lad {
+background-position: -570px -47px
+}
+
+.mlb .mem {
+background-position: -528px -48px
+}
+
+.mlb .mia {
+background-position: -490px -47px
+}
+
+.mlb .mil {
+background-position: -446px -48px
+}
+
+.mlb .min {
+background-position: -407px -48px
+}
+
+.mlb .nas {
+background-position: -367px -46px
+}
+
+.mlb .nor {
+background-position: -329px -46px
+}
+
+.mlb .nym {
+background-position: -284px -49px
+}
+
+.mlb .nyy {
+background-position: -239px -46px
+}
+
+.mlb .oak {
+background-position: -197px -46px
+}
+
+.mlb .osc {
+background-position: -150px -46px
+}
+
+.mlb .phi {
+background-position: -102px -46px
+}
+
+.mlb .pit {
+background-position: -49px -46px
+}
+
+.mlb .rrw {
+background-position: -4px -45px
+}
+
+.mlb .sdp {
+background-position: -827px -4px
+}
+
+.mlb .sea {
+background-position: -788px -5px
+}
+
+.mlb .sfg {
+background-position: -748px -3px
+}
+
+.mlb .slc {
+background-position: -700px -2px
+}
+
+.mlb .suf {
+background-position: -648px -3px
+}
+
+.mlb .tbr {
+background-position: -601px -3px
+}
+
+.mlb .tex {
+background-position: -550px -3px
+}
+
+.mlb .tor {
+background-position: -501px -3px
+}
+
+.mlb .was {
+background-position: -449px -2px
+}
+
+.mlb .ari {
+background-position: -399px -3px
+}
+
+.mlb .atl {
+background-position: -348px 0
+}
+
+.mlb .bal {
+background-position: -300px -3px
+}
+
+.mlb .bos {
+background-position: -250px -3px
+}
+
+.mlb .chc {
+background-position: -201px -2px
+}
+
+.mlb .cin {
+background-position: -149px -2px
+}
+
+.mlb .cle {
+background-position: -98px -2px
+}
+
+.mlb .col {
+background-position: -44px -3px
+}
+
+.mlb .cws {
+background-position: 0 -4px
+}
+
+.mlb .ame {
+background-position: -812px -47px
+}
+
+.mlb .nat {
+background-position: -5px -80px
+}
+
+.copaamerica .arg,
+.copaamerica .can,
+.copaamerica .bol,
+.copaamerica .bra,
+.copaamerica .chi,
+.copaamerica .col,
+.copaamerica .crc,
+.copaamerica .ecu,
+.copaamerica .jam,
+.copaamerica .jpn,
+.copaamerica .mex,
+.copaamerica .pan,
+.copaamerica .par,
+.copaamerica .per,
+.copaamerica .qat,
+.copaamerica .uru,
+.copaamerica .usa,
+.copaamerica .ven,
+.copaamerica .aus {
+background: url("/modules/custom/scoreboard/images/copaamerica.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.copaamerica .arg {
+background-position: -402px -17px
+}
+
+.copaamerica .bol {
+background-position: -370px -19px
+}
+
+.copaamerica .bra {
+background-position: -336px -18px
+}
+
+.copaamerica .can {
+background-position: -709px -22px
+}
+
+.copaamerica .chi {
+background-position: -302.0000228882px -19.9821434021px
+}
+
+.copaamerica .col {
+background-position: -264px -19.0000038147px
+}
+
+.copaamerica .crc {
+background-position: -665px -20px
+}
+
+.copaamerica .ecu {
+background-position: -229.0000228882px -19.9821434021px
+}
+
+.copaamerica .jam {
+background-position: -483px -20px
+}
+
+.copaamerica .jpn {
+background-position: -193px -20.0000038147px
+}
+
+.copaamerica .mex {
+background-position: -528px -22px
+}
+
+.copaamerica .pan {
+background-position: -618px -20px
+}
+
+.copaamerica .par {
+background-position: -156.0000076294px -17.9821434021px
+}
+
+.copaamerica .per {
+background-position: -121px -20.0000038147px
+}
+
+.copaamerica .qat {
+background-position: -85px -19.0000038147px
+}
+
+.copaamerica .uru {
+background-position: -51px -19.9999961853px
+}
+
+.copaamerica .usa {
+background-position: -570px -20px
+}
+
+.copaamerica .ven {
+background-position: -19px -18.0000038147px
+}
+
+.copaamerica .aus {
+background-position: -440px -17px
+}
+
+.lmb .adm,
+.lmb .bdl,
+.lmb .drm,
+.lmb .gdd,
+.lmb .gdo,
+.lmb .ldy,
+.lmb .odt,
+.lmb .pdc,
+.lmb .pdp,
+.lmb .rda,
+.lmb .sdm,
+.lmb .sds,
+.lmb .tdn,
+.lmb .tdq,
+.lmb .tdt,
+.lmb .vdl,
+.lmb .rdv,
+.lmb .mdg,
+.lmb .cdj,
+.lmb .cdq,
+.lmb .ddc {
+background: url("/modules/custom/scoreboard/images/lmb.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.lmb .adm {
+background-position: -5px -5px
+}
+
+.lmb .bdl {
+background-position: -45px -5px
+}
+
+.lmb .drm {
+background-position: -85px -5px
+}
+
+.lmb .gdd {
+background-position: -125px -5px
+}
+
+.lmb .gdo {
+background-position: -5px -45px
+}
+
+.lmb .ldy {
+background-position: -45px -45px
+}
+
+.lmb .odt {
+background-position: -85px -45px
+}
+
+.lmb .pdc {
+background-position: -125px -45px
+}
+
+.lmb .pdp {
+background-position: -5px -85px
+}
+
+.lmb .rda {
+background-position: -45px -85px
+}
+
+.lmb .sdm {
+background-position: -45px -190px
+}
+
+.lmb .sds {
+background-position: -125px -85px
+}
+
+.lmb .tdn {
+background-position: -5px -125px
+}
+
+.lmb .tdq {
+background-position: -45px -125px
+}
+
+.lmb .tdt {
+background-position: -85px -125px
+}
+
+.lmb .vdl {
+background-position: -125px -125px
+}
+
+.lmb .rdv {
+background-position: -3px -157px
+}
+
+.lmb .mdg {
+background-position: -42px -159px
+}
+
+.lmb .cdj {
+background-position: -125px -160px
+}
+
+.lmb .cdq {
+background-position: -84px -160px
+}
+
+.lmb .ddc {
+background-position: -5px -190px
+}
+
+.pacifico .adm,
+.pacifico .cdj,
+.pacifico .cdm,
+.pacifico .mdn,
+.pacifico .ndh,
+.pacifico .tdc,
+.pacifico .vdm,
+.pacifico .ydc,
+.pacifico .sdm,
+.pacifico .adg {
+background: url("/modules/custom/scoreboard/images/lmp.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.pacifico .adm {
+background-position: -5px -5px
+}
+
+.pacifico .cdj {
+background-position: -45px -5px
+}
+
+.pacifico .cdm {
+background-position: -5px -45px
+}
+
+.pacifico .mdn {
+background-position: -45px -45px
+}
+
+.pacifico .ndh {
+background-position: -85px -5px
+}
+
+.pacifico .tdc {
+background-position: -85px -45px
+}
+
+.pacifico .vdm {
+background-position: -5px -85px
+}
+
+.pacifico .ydc {
+background-position: -45px -85px
+}
+
+.pacifico .sdm {
+background-position: -84px -87px
+}
+
+.pacifico .adg {
+background-position: -5px -121px
+}
+
+.nationsleague .ang,
+.nationsleague .ant,
+.nationsleague .aru,
+.nationsleague .bah,
+.nationsleague .bar,
+.nationsleague .bel,
+.nationsleague .ber,
+.nationsleague .boe,
+.nationsleague .can,
+.nationsleague .cos,
+.nationsleague .cub,
+.nationsleague .cur,
+.nationsleague .dom,
+.nationsleague .sal,
+.nationsleague .gra,
+.nationsleague .gde,
+.nationsleague .gua,
+.nationsleague .gya,
+.nationsleague .guy,
+.nationsleague .hai,
+.nationsleague .hon,
+.nationsleague .cay,
+.nationsleague .itc,
+.nationsleague .ivb,
+.nationsleague .ive,
+.nationsleague .jam,
+.nationsleague .mar,
+.nationsleague .mex,
+.nationsleague .mon,
+.nationsleague .nic,
+.nationsleague .pan,
+.nationsleague .svg,
+.nationsleague .pue,
+.nationsleague .rdo,
+.nationsleague .skn,
+.nationsleague .sma,
+.nationsleague .smn,
+.nationsleague .luc,
+.nationsleague .sur,
+.nationsleague .tri,
+.nationsleague .usa {
+background: url("/modules/custom/scoreboard/images/concacafnationsleague1.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.nationsleague .ang {
+background-position: -10px -10px
+}
+
+.nationsleague .ant {
+background-position: -50px -10px
+}
+
+.nationsleague .aru {
+background-position: -90px -10px
+}
+
+.nationsleague .bah {
+background-position: -130px -10px
+}
+
+.nationsleague .bar {
+background-position: -170px -10px
+}
+
+.nationsleague .bel {
+background-position: -210px -10px
+}
+
+.nationsleague .ber {
+background-position: -250px -10px
+}
+
+.nationsleague .boe {
+background-position: -290px -10px
+}
+
+.nationsleague .can {
+background-position: -330px -10px
+}
+
+.nationsleague .cos {
+background-position: -10px -50px
+}
+
+.nationsleague .cub {
+background-position: -50px -50px
+}
+
+.nationsleague .cur {
+background-position: -90px -50px
+}
+
+.nationsleague .dom {
+background-position: -130px -50px
+}
+
+.nationsleague .sal {
+background-position: -170px -50px
+}
+
+.nationsleague .gra {
+background-position: -210px -50px
+}
+
+.nationsleague .gde {
+background-position: -250px -50px
+}
+
+.nationsleague .gua {
+background-position: -290px -50px
+}
+
+.nationsleague .gya {
+background-position: -330px -50px
+}
+
+.nationsleague .guy {
+background-position: -10px -90px
+}
+
+.nationsleague .hai {
+background-position: -50px -90px
+}
+
+.nationsleague .hon {
+background-position: -90px -90px
+}
+
+.nationsleague .cay {
+background-position: -130px -90px
+}
+
+.nationsleague .itc {
+background-position: -170px -90px
+}
+
+.nationsleague .ivb {
+background-position: -210px -90px
+}
+
+.nationsleague .ive {
+background-position: -250px -90px
+}
+
+.nationsleague .jam {
+background-position: -290px -90px
+}
+
+.nationsleague .mar {
+background-position: -330px -90px
+}
+
+.nationsleague .mex {
+background-position: -10px -130px
+}
+
+.nationsleague .mon {
+background-position: -50px -130px
+}
+
+.nationsleague .nic {
+background-position: -90px -130px
+}
+
+.nationsleague .pan {
+background-position: -130px -130px
+}
+
+.nationsleague .svg {
+background-position: -170px -130px
+}
+
+.nationsleague .pue {
+background-position: -210px -130px
+}
+
+.nationsleague .rdo {
+background-position: -250px -130px
+}
+
+.nationsleague .skn {
+background-position: -290px -130px
+}
+
+.nationsleague .smn {
+background-position: -330px -130px
+}
+
+.nationsleague .sma {
+background-position: -10px -170px
+}
+
+.nationsleague .luc {
+background-position: -50px -170px
+}
+
+.nationsleague .sur {
+background-position: -90px -170px
+}
+
+.nationsleague .tri {
+background-position: -130px -170px
+}
+
+.nationsleague .usa {
+background-position: -170px -170px
+}
+
+.mexicoa .atl,
+.mexicoa .can,
+.mexicoa .cel,
+.mexicoa .cim,
+.mexicoa .dor,
+.mexicoa .min,
+.mexicoa .mor,
+.mexicoa .oax,
+.mexicoa .pum,
+.mexicoa .tam,
+.mexicoa .tap,
+.mexicoa .tep,
+.mexicoa .tla,
+.mexicoa .uat,
+.mexicoa .udg,
+.mexicoa .ven,
+.mexicoa .ray,
+.mexicoa .lpz,
+.mexicoa .aza {
+background: url("/modules/custom/scoreboard/images/ligadeexpansion.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.mexicoa .atl {
+background-position: -5px -5px
+}
+
+.mexicoa .can {
+background-position: -40px -5px
+}
+
+.mexicoa .cel {
+background-position: -75px -5px
+}
+
+.mexicoa .cim {
+background-position: -110px -5px
+}
+
+.mexicoa .dor {
+background-position: -145px -5px
+}
+
+.mexicoa .min {
+background-position: -180px -5px
+}
+
+.mexicoa .mor {
+background-position: -213px -2px
+}
+
+.mexicoa .oax {
+background-position: -250px -5px
+}
+
+.mexicoa .pum {
+background-position: -285px -5px
+}
+
+.mexicoa .tam {
+background-position: -317px -5px
+}
+
+.mexicoa .tap {
+background-position: -355px -5px
+}
+
+.mexicoa .tep {
+background-position: -390px -5px
+}
+
+.mexicoa .tla {
+background-position: -425px -5px
+}
+
+.mexicoa .uat {
+background-position: -460px -5px
+}
+
+.mexicoa .udg {
+background-position: -495px -5px
+}
+
+.mexicoa .ven {
+background-position: -530px -5px
+}
+
+.mexicoa .ray {
+background-position: -561px -5px
+}
+
+.mexicoa .lpz {
+background-position: -592px -3px
+}
+
+.mexicoa .aza {
+background-position: -624px -5px
+}
+
+.uefanaciones .alb,
+.uefanaciones .ale,
+.uefanaciones .aoa,
+.uefanaciones .arm,
+.uefanaciones .aus,
+.uefanaciones .aze,
+.uefanaciones .bel,
+.uefanaciones .bie,
+.uefanaciones .bul,
+.uefanaciones .byh,
+.uefanaciones .chi,
+.uefanaciones .cro,
+.uefanaciones .din,
+.uefanaciones .ela,
+.uefanaciones .eqa,
+.uefanaciones .esc,
+.uefanaciones .esp,
+.uefanaciones .est,
+.uefanaciones .fer,
+.uefanaciones .fin,
+.uefanaciones .fra,
+.uefanaciones .gal,
+.uefanaciones .geo,
+.uefanaciones .gib,
+.uefanaciones .gre,
+.uefanaciones .hun,
+.uefanaciones .idn,
+.uefanaciones .ing,
+.uefanaciones .irl,
+.uefanaciones .isl,
+.uefanaciones .isr,
+.uefanaciones .ita,
+.uefanaciones .kaz,
+.uefanaciones .kos,
+.uefanaciones .let,
+.uefanaciones .lie,
+.uefanaciones .lit,
+.uefanaciones .lux,
+.uefanaciones .mal,
+.uefanaciones .mdn,
+.uefanaciones .mol,
+.uefanaciones .mon,
+.uefanaciones .nor,
+.uefanaciones .pab,
+.uefanaciones .pol,
+.uefanaciones .por,
+.uefanaciones .rep,
+.uefanaciones .rum,
+.uefanaciones .rus,
+.uefanaciones .san,
+.uefanaciones .ser,
+.uefanaciones .sue,
+.uefanaciones .sui,
+.uefanaciones .tur,
+.uefanaciones .ucr {
+background: url("/modules/custom/scoreboard/images/uefanationsleague.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.uefanaciones .alb {
+background-position: -5px -5px
+}
+
+.uefanaciones .ale {
+background-position: -40px -5px
+}
+
+.uefanaciones .aoa {
+background-position: -75px -5px
+}
+
+.uefanaciones .arm {
+background-position: -110px -5px
+}
+
+.uefanaciones .aus {
+background-position: -145px -5px
+}
+
+.uefanaciones .aze {
+background-position: -180px -5px
+}
+
+.uefanaciones .bel {
+background-position: -215px -5px
+}
+
+.uefanaciones .bie {
+background-position: -5px -40px
+}
+
+.uefanaciones .bul {
+background-position: -40px -40px
+}
+
+.uefanaciones .byh {
+background-position: -75px -40px
+}
+
+.uefanaciones .chi {
+background-position: -110px -40px
+}
+
+.uefanaciones .cro {
+background-position: -145px -40px
+}
+
+.uefanaciones .din {
+background-position: -180px -40px
+}
+
+.uefanaciones .ela {
+background-position: -215px -40px
+}
+
+.uefanaciones .eqa {
+background-position: -5px -75px
+}
+
+.uefanaciones .esc {
+background-position: -40px -75px
+}
+
+.uefanaciones .esp {
+background-position: -75px -75px
+}
+
+.uefanaciones .est {
+background-position: -110px -75px
+}
+
+.uefanaciones .fer {
+background-position: -145px -75px
+}
+
+.uefanaciones .fin {
+background-position: -180px -75px
+}
+
+.uefanaciones .fra {
+background-position: -215px -75px
+}
+
+.uefanaciones .gal {
+background-position: -5px -110px
+}
+
+.uefanaciones .geo {
+background-position: -40px -110px
+}
+
+.uefanaciones .gib {
+background-position: -75px -110px
+}
+
+.uefanaciones .gre {
+background-position: -110px -110px
+}
+
+.uefanaciones .hun {
+background-position: -145px -110px
+}
+
+.uefanaciones .idn {
+background-position: -180px -110px
+}
+
+.uefanaciones .ing {
+background-position: -215px -110px
+}
+
+.uefanaciones .irl {
+background-position: -5px -145px
+}
+
+.uefanaciones .isl {
+background-position: -40px -145px
+}
+
+.uefanaciones .isr {
+background-position: -75px -145px
+}
+
+.uefanaciones .ita {
+background-position: -110px -145px
+}
+
+.uefanaciones .kaz {
+background-position: -145px -145px
+}
+
+.uefanaciones .kos {
+background-position: -180px -145px
+}
+
+.uefanaciones .let {
+background-position: -215px -145px
+}
+
+.uefanaciones .lie {
+background-position: -5px -180px
+}
+
+.uefanaciones .lit {
+background-position: -40px -180px
+}
+
+.uefanaciones .lux {
+background-position: -75px -180px
+}
+
+.uefanaciones .mal {
+background-position: -110px -180px
+}
+
+.uefanaciones .mdn {
+background-position: -145px -180px
+}
+
+.uefanaciones .mol {
+background-position: -180px -180px
+}
+
+.uefanaciones .mon {
+background-position: -215px -180px
+}
+
+.uefanaciones .nor {
+background-position: -5px -215px
+}
+
+.uefanaciones .pab {
+background-position: -40px -215px
+}
+
+.uefanaciones .pol {
+background-position: -75px -215px
+}
+
+.uefanaciones .por {
+background-position: -110px -215px
+}
+
+.uefanaciones .rep {
+background-position: -145px -215px
+}
+
+.uefanaciones .rum {
+background-position: -180px -215px
+}
+
+.uefanaciones .rus {
+background-position: -215px -215px
+}
+
+.uefanaciones .san {
+background-position: -250px -5px
+}
+
+.uefanaciones .ser {
+background-position: -250px -40px
+}
+
+.uefanaciones .sue {
+background-position: -250px -75px
+}
+
+.uefanaciones .sui {
+background-position: -250px -110px
+}
+
+.uefanaciones .tur {
+background-position: -250px -145px
+}
+
+.uefanaciones .ucr {
+background-position: -250px -180px
+}
+
+.eurocopa .ale,
+.eurocopa .alb,
+.eurocopa .aus,
+.eurocopa .bel,
+.eurocopa .cro,
+.eurocopa .din,
+.eurocopa .esc,
+.eurocopa .esl,
+.eurocopa .svk,
+.eurocopa .esp,
+.eurocopa .fin,
+.eurocopa .fra,
+.eurocopa .gal,
+.eurocopa .geo,
+.eurocopa .hol,
+.eurocopa .hun,
+.eurocopa .ing,
+.eurocopa .ita,
+.eurocopa .mdn,
+.eurocopa .pol,
+.eurocopa .por,
+.eurocopa .rep,
+.eurocopa .rum,
+.eurocopa .rus,
+.eurocopa .ser,
+.eurocopa .sue,
+.eurocopa .sui,
+.eurocopa .tur,
+.eurocopa .ucr {
+background: url("/modules/custom/scoreboard/images/sprite-eurocopa.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.eurocopa .ale {
+background-position: -5px -5px
+}
+
+.eurocopa .alb {
+background-position: -75px -170px
+}
+
+.eurocopa .aus {
+background-position: -40px -5px
+}
+
+.eurocopa .bel {
+background-position: -75px -5px
+}
+
+.eurocopa .cro {
+background-position: -110px -5px
+}
+
+.eurocopa .din {
+background-position: -5px -40px
+}
+
+.eurocopa .esc {
+background-position: -40px -40px
+}
+
+.eurocopa .esl {
+background-position: -75px -36px
+}
+
+.eurocopa .svk {
+background-position: -108px -173px
+}
+
+.eurocopa .esp {
+background-position: -110px -40px
+}
+
+.eurocopa .fin {
+background-position: -5px -75px
+}
+
+.eurocopa .fra {
+background-position: -40px -75px
+}
+
+.eurocopa .gal {
+background-position: -75px -75px
+}
+
+.eurocopa .geo {
+background-position: -40px -175px
+}
+
+.eurocopa .hol {
+background-position: -110px -75px
+}
+
+.eurocopa .hun {
+background-position: -5px -110px
+}
+
+.eurocopa .ing {
+background-position: -40px -110px
+}
+
+.eurocopa .ita {
+background-position: -75px -110px
+}
+
+.eurocopa .mdn {
+background-position: -110px -110px
+}
+
+.eurocopa .pol {
+background-position: -145px -5px
+}
+
+.eurocopa .por {
+background-position: -145px -40px
+}
+
+.eurocopa .rep {
+background-position: -145px -75px
+}
+
+.eurocopa .rum {
+background-position: -5px -175px
+}
+
+.eurocopa .rus {
+background-position: -145px -110px
+}
+
+.eurocopa .ser {
+background-position: -145px -145px
+}
+
+.eurocopa .sue {
+background-position: -5px -145px
+}
+
+.eurocopa .sui {
+background-position: -40px -145px
+}
+
+.eurocopa .tur {
+background-position: -75px -140px
+}
+
+.eurocopa .ucr {
+background-position: -110px -145px
+}
+
+.concacaf .can,
+.concacaf .cos,
+.concacaf .hon,
+.concacaf .jam,
+.concacaf .mex,
+.concacaf .pan,
+.concacaf .sal,
+.concacaf .usa {
+background: url("/modules/custom/scoreboard/images/concacafamistosos.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.concacaf .can {
+background-position: -5px -5px
+}
+
+.concacaf .cos {
+background-position: -40px -5px
+}
+
+.concacaf .hon {
+background-position: -5px -40px
+}
+
+.concacaf .jam {
+background-position: -40px -40px
+}
+
+.concacaf .mex {
+background-position: -75px -5px
+}
+
+.concacaf .pan {
+background-position: -75px -40px
+}
+
+.concacaf .sal {
+background-position: -5px -75px
+}
+
+.concacaf .usa {
+background-position: -40px -75px
+}
+
+.concacaf .can,
+.concacaf .cos,
+.concacaf .hon,
+.concacaf .jam,
+.concacaf .mex,
+.concacaf .pan,
+.concacaf .sal,
+.concacaf .usa {
+background: url("/modules/custom/scoreboard/images/concacafamistosos.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.concacaf .can {
+background-position: -5px -5px
+}
+
+.concacaf .cos {
+background-position: -40px -5px
+}
+
+.concacaf .hon {
+background-position: -5px -40px
+}
+
+.concacaf .jam {
+background-position: -40px -40px
+}
+
+.concacaf .mex {
+background-position: -75px -5px
+}
+
+.concacaf .pan {
+background-position: -75px -40px
+}
+
+.concacaf .sal {
+background-position: -5px -75px
+}
+
+.concacaf .usa {
+background-position: -40px -75px
+}
+
+
+.eliminatorias .arg,
+.eliminatorias .bol,
+.eliminatorias .bra,
+.eliminatorias .chi,
+.eliminatorias .col,
+.eliminatorias .ecu,
+.eliminatorias .par,
+.eliminatorias .per,
+.eliminatorias .uru,
+.eliminatorias .ven {
+background: url("/modules/custom/scoreboard/images/eliminatorias.png") no-repeat;
+width: 30px;
+height: 30px
+}
+
+.eliminatorias .arg {
+background-position: -10px -11px
+}
+
+.eliminatorias .bol {
+background-position: -49px -10px
+}
+
+.eliminatorias .bra {
+background-position: -90px -11px
+}
+
+.eliminatorias .chi {
+background-position: -130px -10px
+}
+
+.eliminatorias .col {
+background-position: -10px -50px
+}
+
+.eliminatorias .ecu {
+background-position: -49px -50px
+}
+
+.eliminatorias .par {
+background-position: -90px -51px
+}
+
+.eliminatorias .per {
+background-position: -130px -50px
+}
+
+.eliminatorias .uru {
+background-position: -10px -92px
+}
+
+.eliminatorias .ven {
+background-position: -48px -90px
+}

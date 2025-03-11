@@ -1,0 +1,74 @@
+// Boostrap imports
+@import "../vendor/bootstrap-5.2.3/scss/mixins/banner";
+@include bsBanner("");
+
+// scss-docs-start import-stack
+// Configuration
+@import "../vendor/bootstrap-5.2.3/scss/functions";
+@import "../vendor/bootstrap-5.2.3/scss/variables";
+@import "../vendor/bootstrap-5.2.3/scss/maps";
+@import "../vendor/bootstrap-5.2.3/scss/mixins";
+@import "../vendor/bootstrap-5.2.3/scss/utilities";
+
+// Layout & components
+@import "../vendor/bootstrap-5.2.3/scss/root";
+@import "../vendor/bootstrap-5.2.3/scss/reboot";
+// @import "../vendor/bootstrap-5.2.3/scss/type";
+@import "../vendor/bootstrap-5.2.3/scss/images";
+@import "../vendor/bootstrap-5.2.3/scss/containers";
+@import "../vendor/bootstrap-5.2.3/scss/grid";
+// @import "../vendor/bootstrap-5.2.3/scss/tables";
+// @import "../vendor/bootstrap-5.2.3/scss/forms";
+// @import "../vendor/bootstrap-5.2.3/scss/buttons";
+// @import "../vendor/bootstrap-5.2.3/scss/transitions";
+// @import "../vendor/bootstrap-5.2.3/scss/dropdown";
+// @import "../vendor/bootstrap-5.2.3/scss/button-group";
+// @import "../vendor/bootstrap-5.2.3/scss/nav";
+// @import "../vendor/bootstrap-5.2.3/scss/navbar";
+// @import "../vendor/bootstrap-5.2.3/scss/card";
+// @import "../vendor/bootstrap-5.2.3/scss/accordion";
+// @import "../vendor/bootstrap-5.2.3/scss/breadcrumb";
+// @import "../vendor/bootstrap-5.2.3/scss/pagination";
+// @import "../vendor/bootstrap-5.2.3/scss/badge";
+// @import "../vendor/bootstrap-5.2.3/scss/alert";
+// @import "../vendor/bootstrap-5.2.3/scss/progress";
+// @import "../vendor/bootstrap-5.2.3/scss/list-group";
+// @import "../vendor/bootstrap-5.2.3/scss/close";
+// @import "../vendor/bootstrap-5.2.3/scss/toasts";
+// @import "../vendor/bootstrap-5.2.3/scss/modal";
+// @import "../vendor/bootstrap-5.2.3/scss/tooltip";
+// @import "../vendor/bootstrap-5.2.3/scss/popover";
+// @import "../vendor/bootstrap-5.2.3/scss/carousel";
+// @import "../vendor/bootstrap-5.2.3/scss/spinners";
+// @import "../vendor/bootstrap-5.2.3/scss/offcanvas";
+// @import "../vendor/bootstrap-5.2.3/scss/placeholders";
+
+// Helpers
+// @import "../vendor/bootstrap-5.2.3/scss/helpers";
+
+// Utilities
+@import "../vendor/bootstrap-5.2.3/scss/utilities/api";
+// scss-docs-end import-stack
+// Boostrap imports ENDS
+
+// Fontawesome import
+$fa-font-path: '../vendor/fontawesome/webfonts';
+// importing core styling file
+@import '../vendor/fontawesome/scss/fontawesome.scss';
+@import '../vendor/fontawesome/scss/solid.scss';
+@import '../vendor/fontawesome/scss/regular.scss';
+@import '../vendor/fontawesome/scss/brands.scss';
+// Fontawesome import ends
+
+
+// Custom styles
+@import "vars/variables";
+@import "mixins/size";
+@import "mixins/vendor-prefixes";
+@import "globals";
+@import "header";
+@import "footer";
+
+// Body Home
+@import "./home/estadisticas"; // Solo en maqueta, esto viene de modulo
+@import "./home/news";
