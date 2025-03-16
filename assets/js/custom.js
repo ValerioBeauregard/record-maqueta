@@ -4,7 +4,6 @@
   //------- OWL carousle init  ---------------
   jQuery(document).ready(function () {
 
-    console.log('Here!')
     // function init_carousel_owl() {
     //   $(".init-carousel-owl").each(function () {
     //     var items = $(this).data("items") ? $(this).data("items") : 5;

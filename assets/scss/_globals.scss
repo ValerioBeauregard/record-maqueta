@@ -44,6 +44,30 @@ body {
 a {
   color: #000;
   text-decoration: none;
+
+  &:hover {
+    color: #ff191e;
+  }
+}
+
+.bloques-noticias {
+  a {
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    border-bottom-width: 0;
+    transition: background-size 0.2s ease-in-out;
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(#ffcc00, #ffcc00);
+    background-position: 0 100%;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+
+    &:hover {
+      background-size: 100% 2px;
+      color: #000000 !important;
+    }
+  }
 }
 
 .container-fluid {

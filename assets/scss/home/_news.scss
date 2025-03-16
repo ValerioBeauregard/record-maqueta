@@ -148,19 +148,6 @@
       // float: left;
       font-size: 12px;
     }
-
-    a {
-      font-size: 14px;
-      font-weight: 600;
-      background-repeat: no-repeat;
-      background-size: 0 2px;
-      border-bottom-width: 0;
-      transition: background-size 0.2sease-in-out;
-      background-image: linear-gradient(transparent, transparent),
-        linear-gradient(var(--yellow), var(--yellow));
-      background-position: 0 100%;
-      color: #000000;
-    }
   }
 }
 
