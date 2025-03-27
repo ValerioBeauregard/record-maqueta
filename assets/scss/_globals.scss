@@ -13,9 +13,23 @@ body {
   }
 }
 
+.w-lateral {
+  width: 11%;
+}
+
+.w-center {
+  width: 78%;
+}
+
 @media (max-width: 1199px) {
-  .container {
-      width: 100% !important;
+  // .container {
+  //     width: 100% !important;
+  // }
+  .w-center {
+    width: 100%;
+  }
+  .w-lateral {
+    display: none;
   }
 }
 

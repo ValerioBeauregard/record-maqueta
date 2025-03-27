@@ -16954,9 +16954,20 @@ body {
   }
 }
 
+.w-lateral {
+  width: 11%;
+}
+
+.w-center {
+  width: 78%;
+}
+
 @media (max-width: 1199px) {
-  .container {
-    width: 100% !important;
+  .w-center {
+    width: 100%;
+  }
+  .w-lateral {
+    display: none;
   }
 }
 @media (min-width: 1200px) {
@@ -25251,6 +25262,43 @@ footer .social-list {
   padding-right: 4px;
 }
 .item-column .item-column-footer .date-and-time {
+  font-size: 12px;
+}
+
+.item-column-main {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  position: relative;
+}
+.item-column-main .item-column-footer {
+  position: absolute;
+  bottom: 0px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgb(0, 0, 0)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+  padding: 10px;
+  width: 100%;
+  color: white !important;
+}
+.item-column-main .item-column-footer .category-name {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+.item-column-main .item-column-footer a {
+  color: #fff;
+  clear: both;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: normal;
+}
+@media (min-width: 992px) {
+  .item-column-main .item-column-footer a {
+    font-size: 23px;
+  }
+}
+.item-column-main .item-column-footer .date-and-time {
   font-size: 12px;
 }
 

@@ -4,6 +4,22 @@ h2 {
   margin-bottom: 11.5px;
 }
 
+@media (min-width: 992px) {
+  .col-lg-8 {
+    width: 70% !important;
+  }
+  .col-lg-4 {
+    width: 30% !important;
+  }
+}
+
+.block-title.main {
+  span {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
 .breadcrumbs {
   font-weight: 700;
   color: #000000;
@@ -161,7 +177,7 @@ h2 {
 .global-destacado {
   .item {
     display: flex;
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: 1px solid #e0e0e0;
     margin-bottom: 15px;
     padding-bottom: 15px;
     overflow: hidden;
@@ -177,6 +193,37 @@ h2 {
       padding: 4px;
       min-width: 32px;
       margin-right: 5px;
+    }
+  }
+}
+
+.resumme {
+  font-size: 12px;
+}
+
+.pager {
+  padding-left: 0;
+  margin: 23px 0;
+  list-style: none;
+  text-align: center;
+
+  .visually-hidden {
+    display: none;
+  }
+
+  li {
+    display: inline;
+
+    & > a {
+      display: inline-block;
+      padding: 5px 14px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+    &.is-active > a {
+      background: #ff191e;
+      color: #fff;
     }
   }
 }
